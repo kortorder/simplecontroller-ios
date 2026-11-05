@@ -1,8 +1,20 @@
 # Simple Controller for iPhone
 
-Simple Controller turns an iPhone into a customizable, one-finger controller. Create profiles and pages, place buttons and sticks where they are comfortable, and try them in Practice. **Version 0.17.2 (build 24)** was installed and launched on an iPhone 15 Pro.
+Simple Controller turns an iPhone into a customizable, one-finger controller. Place buttons and sticks where they are comfortable and try them in Practice. **Version 0.19.0 (build 26)** includes four editable game starters and was installed on an iPhone 15 Pro.
 
-**[Download the complete iPhone source ZIP](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.17.2-source.zip)** · [SHA-256](https://github.com/kortorder/simplecontroller-ios/blob/main/SHA256SUMS.txt)
+**[Download the complete iPhone source ZIP](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.19.0-source.zip)** · [Editable Git bundle](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.19.0.bundle) · [SHA-256 checksums](SHA256SUMS.txt)
+
+## Try a game starter
+On first launch, choose Shooter, Racing, Sports or Open World. To try another layout, tap **Profiles → Game starters** and choose a category. Each choice opens an editable personal copy.
+
+Shooter includes independent Aim and Fire and a combined pad. Racing lets one finger steer while pressing the throttle or brake. Sports offers movement, short and long passes, shooting and sprint. Open World has On foot and Drive pages. Every starter includes a Menus page with the Xbox D-pad, A, B, Menu and View. Button assignments depend on the game. On the iPhone Xbox bridge, after changing pages tap **Bridge menu → Connect bridge** to resume.
+
+## Controller options
+
+- Commands can run immediately, on release, after a delay, with repeat, or with a release delay. For example, `LT:0.5(HRD200)` keeps a half-pressed left trigger for 200 milliseconds after lift. Touch Aim tracks held stages as your fingertip lifts.
+- Each manual Touch Aim stage can have its own aiming sensitivity and entry confirmation time. Sensor actions still require local setup.
+- Floating rings can use compact boost bands, separate movement and aiming actions and distances, direct fine aim, and an optional delay bypass for a direct Boost 2 touch. Finish can require a direct tap.
+- Existing saved layouts keep their settings. Full-forward repeated A and the direct Aim + fire pad are included in the GTA 6 Prep example.
 
 ## Find the controls
 
@@ -14,7 +26,7 @@ Simple Controller turns an iPhone into a customizable, one-finger controller. Cr
 
 ## Build on a Mac
 
-1. Download and extract **SimpleController-iOS-0.17.2-source.zip**. If you cloned this repository, extract the archive of that name from the checkout. In the extracted **SimpleController-iOS** folder, open `SimpleController.xcodeproj` in Xcode.
+1. Download the source ZIP above, extract it, and open `SimpleController.xcodeproj` in the extracted `SimpleController-iOS` folder. To start with Git history, download the bundle above and run `git clone SimpleController-iOS-0.19.0.bundle SimpleController-iOS`, then open the project in that folder.
 2. Select the **SimpleController** scheme and an iPhone simulator, then choose **Run** to use Practice.
 3. To use your iPhone, connect it to the Mac. Select the phone as the destination, choose your Apple team under **Signing & Capabilities**, then run. The bundle identifier must be available to the selected team.
 
@@ -22,9 +34,7 @@ The project targets iOS 17 or later and includes its local Swift package. The cu
 
 ## Try an example profile
 
-The complete source ZIP contains `profiles/GTA-6-Prep.json`, `profiles/GTA-V-Left-side.json`, and a guide in `profiles/README.md`. Save the JSON document you want in Files on your iPhone. In Simple Controller choose **All controls → Profiles → Import iPhone profiles** and select the document. Import adds a copy to your library. The GTA 6 Prep sample uses lower-left sticks, repeated A at full forward, and a direct Aim + fire pad. Its game bindings are provisional.
-
-For a complete Git checkout, [download the portable Git bundle](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.17.2.bundle). In the folder where you downloaded it, run `git clone -b source-import SimpleController-iOS-0.17.2.bundle simplecontroller-ios-source`. That checkout already contains the full project.
+The complete source includes `profiles/GTA-6-Prep.json` and `profiles/GTA-V-Left-side.json`. Save one in Files on the iPhone. In Simple Controller, open **Profiles → Import iPhone profiles** and select the JSON to add an editable copy.
 
 ## Xbox and Android
 

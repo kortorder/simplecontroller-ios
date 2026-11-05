@@ -1,1 +1,2 @@
-ab1fe1000a4c439261572284306ada36b3419b5622805e4c1a36ab0fe7efde44  SimpleController-iOS-0.17.2-source.zip
+21456f10456c9d34aac6adc027abdd7a4fe9a24fdc07e9fd2018f0fa4734dadc  SimpleController-iOS-0.19.0-source.zip
+9254293e88af79b8a39f0251efcc0cd2d08c24414c02e03e2fcd9795329e965f  SimpleController-iOS-0.19.0.bundle
