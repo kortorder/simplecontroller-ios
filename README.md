@@ -1,8 +1,14 @@
 # Simple Controller for iPhone
 
-Simple Controller turns an iPhone into a customizable, one-finger controller. Place buttons and sticks where they are comfortable and try them in Practice. **Version 0.19.0 (build 26)** includes four editable game starters and was installed on an iPhone 15 Pro.
+Simple Controller turns an iPhone into a customizable, one-finger controller. Place buttons and sticks where they are comfortable and try them in Practice. **Version 0.20.0 (build 27)** includes four editable game starters, Macro Mode, and adjustable automatic release.
 
-**[Download the complete iPhone source ZIP](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.19.0-source.zip)** · [Editable Git bundle](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.19.0.bundle) · [SHA-256 checksums](SHA256SUMS.txt)
+**[Download the complete iPhone source ZIP](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.20.0-source.zip)** · [Editable Git bundle](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.20.0.bundle) · [SHA-256 checksums](SHA256SUMS.txt)
+
+## Macro Mode and automatic release
+
+In Edit, hold an ordinary button and turn on **Macro Mode**. One tap completes its timed actions after you lift your finger. Actions default to **200 ms** and release automatically. Add `(U100)` to give an action a 100 ms press. For example, `X360A(U100),X360A(D500)(U100),X360B(D800)(U100)` makes two separate A presses followed by B. Each D is measured from the initial touch. **Release all** cancels the sequence.
+
+Macro Mode can be selected separately for each ordinary button. Hold to toggle, Auto-Tap and advanced button modes are separate choices for that button.
 
 ## Try a game starter
 On first launch, choose Shooter, Racing, Sports or Open World. To try another layout, tap **Profiles → Game starters** and choose a category. Each choice opens an editable personal copy.
@@ -26,7 +32,7 @@ Shooter includes independent Aim and Fire and a combined pad. Racing lets one fi
 
 ## Build on a Mac
 
-1. Download the source ZIP above, extract it, and open `SimpleController.xcodeproj` in the extracted `SimpleController-iOS` folder. To start with Git history, download the bundle above and run `git clone SimpleController-iOS-0.19.0.bundle SimpleController-iOS`, then open the project in that folder.
+1. Download the source ZIP above, extract it, and open `SimpleController.xcodeproj` in the extracted `SimpleController-iOS` folder. To start with Git history, download the bundle above and run `git clone SimpleController-iOS-0.20.0.bundle SimpleController-iOS`, then open the project in that folder.
 2. Select the **SimpleController** scheme and an iPhone simulator, then choose **Run** to use Practice.
 3. To use your iPhone, connect it to the Mac. Select the phone as the destination, choose your Apple team under **Signing & Capabilities**, then run. The bundle identifier must be available to the selected team.
 
