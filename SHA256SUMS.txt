@@ -1,2 +1,2 @@
-866db2025287d9f9cf15eb882cfb877b76d3075aee2194d30b2b8886f4155d6b  SimpleController-iOS-0.20.0-source.zip
-811009bb157f11aa73d740bca19dea3c3e0f066c3797a226cda3d55195408555  SimpleController-iOS-0.20.0.bundle
+a61ee70714625bf70ceb8d2626124f70272a6876dfb3bb3abbec52bb457f6660  SimpleController-iOS-0.21.0-source.zip
+5cea63fdfef99282e1e0c1253ab704d13f0b5cd2ed6bdafce98aff4edf4c0e3b  SimpleController-iOS-0.21.0.bundle

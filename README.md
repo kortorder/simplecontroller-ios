@@ -1,8 +1,14 @@
 # Simple Controller for iPhone
 
-Simple Controller turns an iPhone into a customizable, one-finger controller. Place buttons and sticks where they are comfortable and try them in Practice. **Version 0.20.0 (build 27)** includes four editable game starters, Macro Mode, and adjustable automatic release.
+Simple Controller turns an iPhone into a customizable, one-finger controller. Place buttons and sticks where they are comfortable and try them in Practice. **Version 0.21.0 (build 28)** includes four editable game starters, Macro Mode, and adjustable automatic release.
 
-**[Download the complete iPhone source ZIP](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.20.0-source.zip)** · [Editable Git bundle](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.20.0.bundle) · [SHA-256 checksums](SHA256SUMS.txt)
+**[Download the complete iPhone source ZIP](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.21.0-source.zip)** · [Editable Git bundle](https://github.com/kortorder/simplecontroller-ios/raw/refs/heads/main/SimpleController-iOS-0.21.0.bundle) · [SHA-256 checksums](SHA256SUMS.txt)
+
+## Staying connected
+
+Changing pages or profiles releases held actions and prepares a fresh, neutral bridge session automatically. Editing controls and releasing all actions do not require another tap on Connect. The app remembers the connection through short interruptions, then reconnects with all controls released when you return. Leaving the app for five minutes means you must tap **Connect** again. **Disconnect** or switching to **Practice** ends the connection immediately.
+
+Reconnection still requires a reachable bridge and the configured output capabilities. It does not restore held buttons, sticks, macros, or trigger pressure.
 
 ## Macro Mode and automatic release
 
@@ -32,7 +38,7 @@ Shooter includes independent Aim and Fire and a combined pad. Racing lets one fi
 
 ## Build on a Mac
 
-1. Download the source ZIP above, extract it, and open `SimpleController.xcodeproj` in the extracted `SimpleController-iOS` folder. To start with Git history, download the bundle above and run `git clone SimpleController-iOS-0.20.0.bundle SimpleController-iOS`, then open the project in that folder.
+1. Download the source ZIP above, extract it, and open `SimpleController.xcodeproj` in the extracted `SimpleController-iOS` folder. To start with Git history, download the bundle above and run `git clone SimpleController-iOS-0.21.0.bundle SimpleController-iOS`, then open the project in that folder.
 2. Select the **SimpleController** scheme and an iPhone simulator, then choose **Run** to use Practice.
 3. To use your iPhone, connect it to the Mac. Select the phone as the destination, choose your Apple team under **Signing & Capabilities**, then run. The bundle identifier must be available to the selected team.
 
