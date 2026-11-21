@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1000000000000000000002A /* QuickStartProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000002A /* QuickStartProgress.swift */; };
+		A10000000000000000000029 /* AppQuickStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000029 /* AppQuickStartView.swift */; };
+		B10000000000000000000001 /* MovableControllerToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* MovableControllerToolbar.swift */; };
+		A100000000000000000000FD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A200000000000000000000FD /* PrivacyInfo.xcprivacy */; };
+		A100000000000000000000FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A200000000000000000000FE /* Assets.xcassets */; };
+		A10000000000000000000028 /* AppPrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000028 /* AppPrivacyView.swift */; };
+		A100000000000000000000FF /* Starters in Resources */ = {isa = PBXBuildFile; fileRef = A200000000000000000000FF /* Starters */; };
+		A10000000000000000000027 /* ControlOrientationSizeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000027 /* ControlOrientationSizeSettings.swift */; };
+		A10000000000000000000026 /* RawRecoveryDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000026 /* RawRecoveryDocument.swift */; };
+		A10000000000000000000025 /* RecoveryDocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000025 /* RecoveryDocumentsView.swift */; };
+		A10000000000000000000024 /* FloatingActionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000024 /* FloatingActionSettingsView.swift */; };
+		A10000000000000000000023 /* CameraFollowPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000023 /* CameraFollowPracticeView.swift */; };
+		A10000000000000000000022 /* CameraFollowSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000022 /* CameraFollowSettingsView.swift */; };
+		A10000000000000000000021 /* ProfileBulkDeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000021 /* ProfileBulkDeleteView.swift */; };
+		A10000000000000000000020 /* ControllerAppearancePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000020 /* ControllerAppearancePalette.swift */; };
+		A1000000000000000000001F /* ControllerOrientationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001F /* ControllerOrientationAdapter.swift */; };
+		A1000000000000000000001E /* DisplaySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001E /* DisplaySettingsView.swift */; };
+		A1000000000000000000001D /* FloatingRingEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001D /* FloatingRingEditorView.swift */; };
+		A1000000000000000000001C /* FloatingCanvasOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001C /* FloatingCanvasOverlay.swift */; };
+		A1000000000000000000001B /* FloatingControlsEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001B /* FloatingControlsEditor.swift */; };
+		A1000000000000000000001A /* SaveControlPresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001A /* SaveControlPresetView.swift */; };
+		A10000000000000000000019 /* ControlPresetPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000019 /* ControlPresetPickerView.swift */; };
+		A10000000000000000000018 /* SettingsPresetManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000018 /* SettingsPresetManagerView.swift */; };
+		A10000000000000000000017 /* AndroidEditedExportReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017 /* AndroidEditedExportReviewView.swift */; };
+		A10000000000000000000016 /* TouchAimSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* TouchAimSettingsView.swift */; };
+		A10000000000000000000015 /* TouchAimCalibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* TouchAimCalibrationView.swift */; };
+		A10000000000000000000014 /* TouchMetricCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* TouchMetricCapture.swift */; };
+		A10000000000000000000013 /* AndroidImportReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013 /* AndroidImportReviewView.swift */; };
+		A10000000000000000000012 /* AdvancedButtonSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* AdvancedButtonSettingsView.swift */; };
+		A10000000000000000000011 /* ProfilePagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* ProfilePagesView.swift */; };
+		A10000000000000000000010 /* PracticeOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* PracticeOutputView.swift */; };
+		A1000000000000000000000F /* ProfileOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000F /* ProfileOptionsView.swift */; };
+		A1000000000000000000000E /* NativeProfileDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000E /* NativeProfileDocument.swift */; };
+		A1000000000000000000000D /* ProfileManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000D /* ProfileManagerView.swift */; };
+		A1000000000000000000000C /* ProfileControlEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C /* ProfileControlEditor.swift */; };
+		A1000000000000000000000B /* ProfileCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* ProfileCanvas.swift */; };
+		A1000000000000000000000A /* ProfileControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* ProfileControllerViewModel.swift */; };
+		A10000000000000000000007 /* BehaviorSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* BehaviorSettingsView.swift */; };
+		A10000000000000000000001 /* SimpleControllerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* SimpleControllerApp.swift */; };
+		A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* ContentView.swift */; };
+		A10000000000000000000003 /* ControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* ControllerViewModel.swift */; };
+		A10000000000000000000004 /* UDPBridgeTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* UDPBridgeTransport.swift */; };
+		A10000000000000000000005 /* ControllerCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* ControllerCanvas.swift */; };
+		A10000000000000000000006 /* ControllerCore in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000002 /* ControllerCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2000000000000000000002A /* QuickStartProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickStartProgress.swift; sourceTree = "<group>"; };
+		A20000000000000000000029 /* AppQuickStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppQuickStartView.swift; sourceTree = "<group>"; };
+		B20000000000000000000001 /* MovableControllerToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableControllerToolbar.swift; sourceTree = "<group>"; };
+		A200000000000000000000FD /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A200000000000000000000FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20000000000000000000028 /* AppPrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPrivacyView.swift; sourceTree = "<group>"; };
+		A200000000000000000000FF /* Starters */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Starters; path = profiles/Starters; sourceTree = "<group>"; };
+		A20000000000000000000027 /* ControlOrientationSizeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlOrientationSizeSettings.swift; sourceTree = "<group>"; };
+		A20000000000000000000026 /* RawRecoveryDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawRecoveryDocument.swift; sourceTree = "<group>"; };
+		A20000000000000000000025 /* RecoveryDocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryDocumentsView.swift; sourceTree = "<group>"; };
+		A20000000000000000000024 /* FloatingActionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionSettingsView.swift; sourceTree = "<group>"; };
+		A20000000000000000000023 /* CameraFollowPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFollowPracticeView.swift; sourceTree = "<group>"; };
+		A20000000000000000000022 /* CameraFollowSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFollowSettingsView.swift; sourceTree = "<group>"; };
+		A20000000000000000000021 /* ProfileBulkDeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBulkDeleteView.swift; sourceTree = "<group>"; };
+		A20000000000000000000020 /* ControllerAppearancePalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerAppearancePalette.swift; sourceTree = "<group>"; };
+		A2000000000000000000001F /* ControllerOrientationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerOrientationAdapter.swift; sourceTree = "<group>"; };
+		A2000000000000000000001E /* DisplaySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySettingsView.swift; sourceTree = "<group>"; };
+		A2000000000000000000001D /* FloatingRingEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingRingEditorView.swift; sourceTree = "<group>"; };
+		A2000000000000000000001C /* FloatingCanvasOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingCanvasOverlay.swift; sourceTree = "<group>"; };
+		A2000000000000000000001B /* FloatingControlsEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingControlsEditor.swift; sourceTree = "<group>"; };
+		A2000000000000000000001A /* SaveControlPresetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveControlPresetView.swift; sourceTree = "<group>"; };
+		A20000000000000000000019 /* ControlPresetPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPresetPickerView.swift; sourceTree = "<group>"; };
+		A20000000000000000000018 /* SettingsPresetManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresetManagerView.swift; sourceTree = "<group>"; };
+		A20000000000000000000017 /* AndroidEditedExportReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidEditedExportReviewView.swift; sourceTree = "<group>"; };
+		A20000000000000000000016 /* TouchAimSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchAimSettingsView.swift; sourceTree = "<group>"; };
+		A20000000000000000000015 /* TouchAimCalibrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchAimCalibrationView.swift; sourceTree = "<group>"; };
+		A20000000000000000000014 /* TouchMetricCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchMetricCapture.swift; sourceTree = "<group>"; };
+		A20000000000000000000013 /* AndroidImportReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidImportReviewView.swift; sourceTree = "<group>"; };
+		A20000000000000000000012 /* AdvancedButtonSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedButtonSettingsView.swift; sourceTree = "<group>"; };
+		A20000000000000000000011 /* ProfilePagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePagesView.swift; sourceTree = "<group>"; };
+		A20000000000000000000010 /* PracticeOutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeOutputView.swift; sourceTree = "<group>"; };
+		A2000000000000000000000F /* ProfileOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionsView.swift; sourceTree = "<group>"; };
+		A2000000000000000000000E /* NativeProfileDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeProfileDocument.swift; sourceTree = "<group>"; };
+		A2000000000000000000000D /* ProfileManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManagerView.swift; sourceTree = "<group>"; };
+		A2000000000000000000000C /* ProfileControlEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileControlEditor.swift; sourceTree = "<group>"; };
+		A2000000000000000000000B /* ProfileCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCanvas.swift; sourceTree = "<group>"; };
+		A2000000000000000000000A /* ProfileControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileControllerViewModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000009 /* BehaviorSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorSettingsView.swift; sourceTree = "<group>"; };
+		A20000000000000000000001 /* SimpleControllerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleControllerApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* ControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerViewModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* UDPBridgeTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPBridgeTransport.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* ControllerCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerCanvas.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000007 /* SimpleController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000008 /* Build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Build.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A40000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000006 /* ControllerCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A30000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000002 /* iOSApp */,
+				A200000000000000000000FF /* Starters */,
+				A30000000000000000000004 /* Configuration */,
+				A30000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A30000000000000000000002 /* iOSApp */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* SimpleControllerApp.swift */,
+				A200000000000000000000FD /* PrivacyInfo.xcprivacy */,
+				A200000000000000000000FE /* Assets.xcassets */,
+				A20000000000000000000028 /* AppPrivacyView.swift */,
+				A2000000000000000000002A /* QuickStartProgress.swift */,
+				A20000000000000000000029 /* AppQuickStartView.swift */,
+				A20000000000000000000002 /* ContentView.swift */,
+				B20000000000000000000001 /* MovableControllerToolbar.swift */,
+				A20000000000000000000003 /* ControllerViewModel.swift */,
+				A20000000000000000000004 /* UDPBridgeTransport.swift */,
+				A20000000000000000000005 /* ControllerCanvas.swift */,
+				A20000000000000000000009 /* BehaviorSettingsView.swift */,
+				A20000000000000000000012 /* AdvancedButtonSettingsView.swift */,
+				A20000000000000000000014 /* TouchMetricCapture.swift */,
+				A20000000000000000000015 /* TouchAimCalibrationView.swift */,
+				A20000000000000000000016 /* TouchAimSettingsView.swift */,
+				A20000000000000000000017 /* AndroidEditedExportReviewView.swift */,
+				A20000000000000000000018 /* SettingsPresetManagerView.swift */,
+				A20000000000000000000019 /* ControlPresetPickerView.swift */,
+				A2000000000000000000001A /* SaveControlPresetView.swift */,
+				A20000000000000000000025 /* RecoveryDocumentsView.swift */,
+				A20000000000000000000027 /* ControlOrientationSizeSettings.swift */,
+				A20000000000000000000026 /* RawRecoveryDocument.swift */,
+				A20000000000000000000024 /* FloatingActionSettingsView.swift */,
+				A20000000000000000000023 /* CameraFollowPracticeView.swift */,
+				A20000000000000000000022 /* CameraFollowSettingsView.swift */,
+				A20000000000000000000021 /* ProfileBulkDeleteView.swift */,
+				A20000000000000000000020 /* ControllerAppearancePalette.swift */,
+				A2000000000000000000001F /* ControllerOrientationAdapter.swift */,
+				A2000000000000000000001E /* DisplaySettingsView.swift */,
+				A2000000000000000000001D /* FloatingRingEditorView.swift */,
+				A2000000000000000000001C /* FloatingCanvasOverlay.swift */,
+				A2000000000000000000001B /* FloatingControlsEditor.swift */,
+				A20000000000000000000013 /* AndroidImportReviewView.swift */,
+				A20000000000000000000011 /* ProfilePagesView.swift */,
+				A20000000000000000000010 /* PracticeOutputView.swift */,
+				A2000000000000000000000F /* ProfileOptionsView.swift */,
+				A2000000000000000000000E /* NativeProfileDocument.swift */,
+				A2000000000000000000000D /* ProfileManagerView.swift */,
+				A2000000000000000000000C /* ProfileControlEditor.swift */,
+				A2000000000000000000000B /* ProfileCanvas.swift */,
+				A2000000000000000000000A /* ProfileControllerViewModel.swift */,
+				A20000000000000000000006 /* Info.plist */,
+			);
+			path = iOSApp;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000007 /* SimpleController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000004 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000008 /* Build.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* SimpleController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70000000000000000000002 /* Build configuration list for PBXNativeTarget "SimpleController" */;
+			buildPhases = (
+				A40000000000000000000001 /* Sources */,
+				A40000000000000000000002 /* Frameworks */,
+				A40000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleController;
+			packageProductDependencies = (
+				A90000000000000000000002 /* ControllerCore */,
+			);
+			productName = SimpleController;
+			productReference = A20000000000000000000007 /* SimpleController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A60000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A50000000000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A70000000000000000000001 /* Build configuration list for PBXProject "SimpleController" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A30000000000000000000001;
+			packageReferences = (
+				A90000000000000000000001 /* XCLocalSwiftPackageReference "Packages/ControllerCore" */,
+			);
+			productRefGroup = A30000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50000000000000000000001 /* SimpleController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A40000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A100000000000000000000FF /* Starters in Resources */,
+				A100000000000000000000FD /* PrivacyInfo.xcprivacy in Resources */,
+				A100000000000000000000FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A40000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* SimpleControllerApp.swift in Sources */,
+				A10000000000000000000028 /* AppPrivacyView.swift in Sources */,
+				A1000000000000000000002A /* QuickStartProgress.swift in Sources */,
+				A10000000000000000000029 /* AppQuickStartView.swift in Sources */,
+				A10000000000000000000002 /* ContentView.swift in Sources */,
+				B10000000000000000000001 /* MovableControllerToolbar.swift in Sources */,
+				A10000000000000000000003 /* ControllerViewModel.swift in Sources */,
+				A10000000000000000000004 /* UDPBridgeTransport.swift in Sources */,
+				A10000000000000000000005 /* ControllerCanvas.swift in Sources */,
+				A10000000000000000000007 /* BehaviorSettingsView.swift in Sources */,
+				A10000000000000000000012 /* AdvancedButtonSettingsView.swift in Sources */,
+				A10000000000000000000014 /* TouchMetricCapture.swift in Sources */,
+				A10000000000000000000015 /* TouchAimCalibrationView.swift in Sources */,
+				A10000000000000000000016 /* TouchAimSettingsView.swift in Sources */,
+				A10000000000000000000017 /* AndroidEditedExportReviewView.swift in Sources */,
+				A10000000000000000000018 /* SettingsPresetManagerView.swift in Sources */,
+				A10000000000000000000019 /* ControlPresetPickerView.swift in Sources */,
+				A1000000000000000000001A /* SaveControlPresetView.swift in Sources */,
+				A10000000000000000000025 /* RecoveryDocumentsView.swift in Sources */,
+				A10000000000000000000027 /* ControlOrientationSizeSettings.swift in Sources */,
+				A10000000000000000000026 /* RawRecoveryDocument.swift in Sources */,
+				A10000000000000000000024 /* FloatingActionSettingsView.swift in Sources */,
+				A10000000000000000000023 /* CameraFollowPracticeView.swift in Sources */,
+				A10000000000000000000022 /* CameraFollowSettingsView.swift in Sources */,
+				A10000000000000000000021 /* ProfileBulkDeleteView.swift in Sources */,
+				A10000000000000000000020 /* ControllerAppearancePalette.swift in Sources */,
+				A1000000000000000000001F /* ControllerOrientationAdapter.swift in Sources */,
+				A1000000000000000000001E /* DisplaySettingsView.swift in Sources */,
+				A1000000000000000000001D /* FloatingRingEditorView.swift in Sources */,
+				A1000000000000000000001C /* FloatingCanvasOverlay.swift in Sources */,
+				A1000000000000000000001B /* FloatingControlsEditor.swift in Sources */,
+				A10000000000000000000013 /* AndroidImportReviewView.swift in Sources */,
+				A10000000000000000000011 /* ProfilePagesView.swift in Sources */,
+				A10000000000000000000010 /* PracticeOutputView.swift in Sources */,
+				A1000000000000000000000F /* ProfileOptionsView.swift in Sources */,
+				A1000000000000000000000E /* NativeProfileDocument.swift in Sources */,
+				A1000000000000000000000D /* ProfileManagerView.swift in Sources */,
+				A1000000000000000000000C /* ProfileControlEditor.swift in Sources */,
+				A1000000000000000000000B /* ProfileCanvas.swift in Sources */,
+				A1000000000000000000000A /* ProfileControllerViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A80000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A80000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A80000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20000000000000000000008 /* Build.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 41;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = iOSApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kortorder.simplecontroller;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A80000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20000000000000000000008 /* Build.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 41;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = iOSApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kortorder.simplecontroller;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70000000000000000000001 /* Build configuration list for PBXProject "SimpleController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80000000000000000000001 /* Debug */,
+				A80000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A70000000000000000000002 /* Build configuration list for PBXNativeTarget "SimpleController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80000000000000000000003 /* Debug */,
+				A80000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A90000000000000000000001 /* XCLocalSwiftPackageReference "Packages/ControllerCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/ControllerCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A90000000000000000000002 /* ControllerCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A90000000000000000000001 /* XCLocalSwiftPackageReference "Packages/ControllerCore" */;
+			productName = ControllerCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A60000000000000000000001 /* Project object */;
+}
