@@ -3,8 +3,8 @@
   "source": "/private/tmp/sc-community-help-2026-11-21/ios",
   "stage": "/private/tmp/sc-community-publish/snapshots/ios",
   "name": "SimpleController-iOS-1.0.3-41-source",
-  "files": 357,
-  "bytes": 6102467,
+  "files": 358,
+  "bytes": 6104860,
   "omitted": [
     "Packages/ControllerCore/.swiftpm/",
     "bridge/fixtures/ack.hex",
@@ -47,6 +47,11 @@
   ],
   "findings": [],
   "manifest": [
+    {
+      "path": ".github/workflows/windows-receiver-tests.yml",
+      "bytes": 2351,
+      "sha256": "10554d4fbf2432b3fd36c9c6b98ba47a42c03d1a63e2e84ed79f72e2a191bda9"
+    },
     {
       "path": ".gitignore",
       "bytes": 332,
@@ -1669,8 +1674,8 @@
     },
     {
       "path": "receiver/test_windows_setup.py",
-      "bytes": 3911,
-      "sha256": "43da42cfd0227757604fbfec296c6235e0d0edb987c47dbe562f4335cf7e7c6b"
+      "bytes": 3953,
+      "sha256": "80bc8d11b5f8770736a9b114e455823babd279338a613d110b74f1b0b2cebe05"
     },
     {
       "path": "receiver/voice_input_server.py",
