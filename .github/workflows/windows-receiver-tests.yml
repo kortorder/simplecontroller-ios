@@ -1,0 +1,55 @@
+name: Windows receiver tests (mock outputs)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  receiver:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: windows-2025
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: receiver
+    env:
+      PYTHONUTF8: '1'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - name: Check out reviewed source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Set up 64-bit Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+          architecture: x64
+      - name: Run all receiver tests, including both Windows ABI tests
+        shell: python -X utf8 -S {0}
+        run: |
+          import ctypes, os, struct, sys, unittest
+          assert sys.platform == 'win32' and struct.calcsize('P') == 8
+          # Native output must stay mocked. Fail on accidental DLL loading,
+          # subprocess execution or external socket access during the suite.
+          def guard(event, args):
+              if event in ('ctypes.dlopen', 'subprocess.Popen', 'os.system', 'os.exec', 'os.spawn'):
+                  raise RuntimeError('Unexpected native/process operation in mock tests: ' + event)
+              if event in ('socket.connect', 'socket.bind'):
+                  address = args[1]
+                  if not isinstance(address, tuple) or address[0] not in ('127.0.0.1', '::1', 'localhost'):
+                      raise RuntimeError('Tests must use loopback sockets only')
+          sys.addaudithook(guard)
+          sys.path.insert(0, os.getcwd())
+          import run_tests
+          tests = list(run_tests.flatten(unittest.defaultTestLoader.discover('.')))
+          abi = [test.id() for test in tests if '.TaggedAbiTests.' in test.id()]
+          assert len(abi) == 2, abi
+          print('Windows ABI cases included:', *abi, sep='\n')
+          print('Total tests discovered:', len(tests))
+          assert len(tests) >= 293, 'Receiver suite is unexpectedly incomplete'
+          result = unittest.TextTestRunner(verbosity=2).run(unittest.TestSuite(tests))
+          raise SystemExit(0 if result.wasSuccessful() else 1)
