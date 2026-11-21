@@ -1,0 +1,2 @@
+// Optional local Apple signing settings; excluded from version control.
+#include? "LocalSigning.xcconfig"
