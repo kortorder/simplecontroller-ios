@@ -1,12 +1,12 @@
 # Simple Controller Privacy Policy
 
-Updated November 13, 2026. Published by the Simple Controller project.
+Updated November 21, 2026. Published by the Simple Controller project.
 
-Simple Controller lets you create and use touch controller profiles on your iPhone. Practice works on your device. Bridge mode sends controller commands to the bridge address you configure. No account is required.
+Simple Controller lets you create and use touch controller profiles on your iPhone. Practice works on your device. Connection mode sends inputs to the console bridge or Windows PC receiver address you configure. No account is required.
 
 ## Data stored and used on your device
 
-The app saves your profiles, control layouts, reusable settings, calibration summaries, display preferences, bridge address and port, protocol settings, and recovery copies in its local app storage. It also saves a short-lived connection-resume record so it can decide whether to resume a connection after a brief interruption. These records support the app’s features; they are not sent to a developer-operated service.
+The app saves your profiles, control layouts, reusable settings, calibration summaries, display preferences, quick-start guide progress, bridge address and port, protocol settings, and recovery copies in its local app storage. It also saves a short-lived connection-resume record so it can decide whether to resume a connection after a brief interruption. These records support the app’s features; they are not sent to a developer-operated service.
 
 Touch positions, timing, contact-size measurements, and force measurements where your device supports them are processed to operate controls and calibrate touch behavior. Raw calibration samples remain in the calibration view’s memory and are discarded when it closes. Calibration summaries you choose to apply or save become part of your saved settings and profiles. The app does not use these measurements to identify you.
 
@@ -22,11 +22,11 @@ If you select iCloud Drive, another file provider, or a sharing destination, tha
 
 ## Controller connections
 
-When you connect a bridge, the app sends controller state, connection/session tokens, sequence numbers, and protocol messages to the configured IPv4 address and port, normally a bridge on your local network. Controller state includes supported buttons, sticks, directional-pad input, and trigger values. The bridge replies with readiness and acknowledgment messages. This exchange operates the controller; it does not upload your profile library or imported originals to a developer service.
+When you connect a console bridge or Windows PC receiver, the app sends controller state, connection/session tokens, sequence numbers, and protocol messages to the configured IPv4 address and port, normally a device on your local network. Controller state includes supported buttons, sticks, directional-pad input, and trigger values. Windows PC mode also sends assigned keyboard keys, mouse buttons, pointer movement and scrolling. The receiving device replies with readiness and acknowledgment messages. This exchange operates the controller; it does not upload your profile library or imported originals to a developer service.
 
-The connection uses UDP and has no app-level encryption or authentication. Session tokens keep connection sessions separate; they are not an account or device identifier. The network and receiving bridge can see the packets and network addresses needed for the connection. Disconnecting or switching to Practice stops the controller connection. You can also revoke Local Network access in iOS Settings.
+The connection uses UDP and has no app-level encryption or authentication. Session tokens keep connection sessions separate; they are not an account or device identifier. The network and receiving device can see the packets and network addresses needed for the connection. Disconnecting or switching to Practice stops the controller connection. You can also revoke Local Network access in iOS Settings.
 
-A bridge and its hardware or firmware may have their own data-handling behavior. This policy describes the iPhone app.
+A bridge, PC receiver and their hardware or software may have their own data-handling behavior. This policy describes the iPhone app.
 
 ## Developer collection, advertising, and analytics
 
@@ -34,7 +34,7 @@ This version has no developer-operated data-collection endpoint, advertising SDK
 
 ## External links and optional support
 
-Help and privacy links open GitHub in your browser only when you choose them. GitHub receives the browser and network information needed to serve those pages and handles it under its own privacy policy.
+Help and privacy links open external websites in your browser only when you choose them. Those sites receive the browser and network information needed to serve their pages and handle it under their own privacy policies.
 
 If you choose to submit a GitHub issue, the information you post is public and can be read by the project’s maintainers and other visitors. Do not post private files, personal information, or network addresses. The app does not automatically attach profiles, diagnostics, or other app data. Information you submit is retained by GitHub under its policies and account controls; removing app data does not remove a public issue or copies others may have made.
 

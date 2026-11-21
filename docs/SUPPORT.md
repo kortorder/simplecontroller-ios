@@ -1,26 +1,24 @@
 # Simple Controller support
 
-Simple Controller is a customizable iPhone touch controller. Arrange buttons, sticks and touch controls around your reach, and try them in Practice before connecting hardware.
+Open **Bridge → Support** or **Tools → All controls → Support** in the app. Learn, PC and Console tabs explain the basics and connection options. Replay the illustrated quick start whenever needed.
 
-## Start in Practice
+- [Connection and beginner FAQ](../FAQ.txt) — PC, exact Pico model, Xbox setup and PlayStation limitations.
+- [Free Windows receiver setup](../receiver/README.md) — install receiver software/driver, enter the PC’s local IP address and port 42734, and test controls. No extra bridge hardware is needed for PC use.
+- [Videos and downloads](https://github.com/kortorder/simplecontroller-ios/releases) — silent 30-second preview, 3:30 beginner guide, companion chapter guide and receiver ZIP.
+- [Wi-Fi Pico bridge](https://github.com/kortorder/simplecontroller-pico-wifi-bridge) — phone to Xbox Adaptive Controller.
+- [Permobil Omni2 joystick bridge](https://github.com/kortorder/omni2-pico-xbox-joystick) — separate chair Pico.
+- [Android community app](https://github.com/kortorder/simplecontroller-android).
 
-Open **Bridge menu → Practice on this iPhone**. No extra hardware is needed. Use **Profiles → Game starters** for an editable example. Tap **Edit**, move a control, or press and hold it to change its settings. **Save layout** keeps the changes; **Cancel** restores the saved layout. **Release all** clears held inputs, repeats and delayed actions.
+Xbox setup needs a correctly configured RP2040 Pico W/WH and compatible Adaptive Controller power/cables. Ordinary USB LT/RT mode is full press/release. Adjustable pressure needs the matching additional route. PlayStation/Zen/Pico combinations remain experimental; a Pico does not plug directly into Sony Access as a USB accessory.
 
-## Connect to Xbox
+The Windows receiver is free and targets Intel/AMD 64-bit Windows. Its free ViGEmBus virtual controller driver is archived; see the official final release and notices in the setup guide. New iPhone PC transport has automated/simulator tests; physical Windows driver and game acceptance still needs a Windows test.
 
-The tested route uses a Raspberry Pi Pico W with the project's compatible Wi-Fi bridge firmware and an Xbox Adaptive Controller. The phone and Pico use the same trusted network. Open **Bridge menu → Bridge settings**, enter the Pico's address and port, and connect. Allow Local Network access when iOS asks.
+## Keep your layout safe
 
-- [Wi-Fi Pico firmware and setup](https://github.com/kortorder/simplecontroller-pico-wifi-bridge)
-- [Separate Omni2 chair-joystick Pico](https://github.com/kortorder/omni2-pico-xbox-joystick)
+Export a profile backup before experimenting. Updates preserve profiles and saved positions. The illustrated guide does not replace existing layouts. Stop / Release all clears phone actions. Use explicit Disconnect or Practice when you do not want game output.
 
-USB-button trigger mode provides full LT/RT presses through X1/X2 mappings in Xbox Accessories. Adjustable trigger pressure requires a different compatible hardware route. The Cronus Zen route remains experimental and needs its physical Xbox verification. Changing an app setting does not install firmware or add the required circuit. Keyboard, mouse, Camera Follow and other outputs marked Practice-only are not console output.
+## Report a problem
 
-## Keep a backup
+Use [GitHub Issues](https://github.com/kortorder/simplecontroller-ios/issues). Include app version, phone/OS, output mode, the step that failed and what you expected. Do not post Wi-Fi passwords, private firmware, Bluetooth pairing backups or personal account information. Diagnostic exports can contain commands/network addresses; review before sharing.
 
-Open **Profiles → Export all profiles** and choose a file destination you control. Backups include available preserved Android originals. Deleting a profile can leave local recovery copies; see the [privacy policy](PRIVACY.md) for retention and deletion details.
-
-## Get help
-
-[Open a support issue](https://github.com/kortorder/simplecontroller-ios/issues) with your app version, iPhone/iOS version, which bridge mode you use, the steps you tried and the exact message shown. GitHub issues are public: omit passwords, private files, personal details and network addresses. The app does not automatically attach your profiles or diagnostics.
-
-If a Mac-installed development copy stops opening after several days, its Apple signing permission may have expired. Re-signing is temporary. The project is preparing App Store distribution to remove that recurring development-signing expiry; an approved App Store release is not yet available.
+[Privacy policy](PRIVACY.md). No app account is required; profiles and guide progress are stored on your device.
