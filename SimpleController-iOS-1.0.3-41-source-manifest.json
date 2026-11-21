@@ -1,0 +1,1836 @@
+{
+  "platform": "ios",
+  "source": "/private/tmp/sc-community-help-2026-11-21/ios",
+  "stage": "/private/tmp/sc-community-publish/snapshots/ios",
+  "name": "SimpleController-iOS-1.0.3-41-source",
+  "files": 357,
+  "bytes": 6102467,
+  "omitted": [
+    "Packages/ControllerCore/.swiftpm/",
+    "bridge/fixtures/ack.hex",
+    "bridge/fixtures/hello.hex",
+    "bridge/fixtures/mixed-precise-sequence.hex",
+    "bridge/fixtures/neutral-first.hex",
+    "bridge/fixtures/pressure/pressure-ack.hex",
+    "bridge/fixtures/pressure/pressure-hello.hex",
+    "bridge/fixtures/pressure/pressure-mixed-full.hex",
+    "bridge/fixtures/pressure/pressure-neutral-first.hex",
+    "bridge/fixtures/pressure/pressure-ready.hex",
+    "bridge/fixtures/pressure/pressure-stop-max.hex",
+    "bridge/fixtures/pressure/pressure-stopped-max.hex",
+    "bridge/fixtures/pressure/pressure-tenth-half.hex",
+    "bridge/fixtures/pressure/pressure-unavailable.hex",
+    "bridge/fixtures/ready.hex",
+    "bridge/fixtures/stop-max.hex",
+    "bridge/fixtures/stopped-max.hex",
+    "bridge/fixtures/unavailable.hex",
+    "bridge/fixtures/usb-buttons/usb-ack.hex",
+    "bridge/fixtures/usb-buttons/usb-both-mixed.hex",
+    "bridge/fixtures/usb-buttons/usb-hello.hex",
+    "bridge/fixtures/usb-buttons/usb-left-full.hex",
+    "bridge/fixtures/usb-buttons/usb-neutral-first.hex",
+    "bridge/fixtures/usb-buttons/usb-ready.hex",
+    "bridge/fixtures/usb-buttons/usb-right-full.hex",
+    "bridge/fixtures/usb-buttons/usb-stop-max.hex",
+    "bridge/fixtures/usb-buttons/usb-stopped-max.hex",
+    "bridge/fixtures/usb-buttons/usb-unavailable.hex",
+    "bridge/fixtures/usb-pressure/zen-ack.hex",
+    "bridge/fixtures/usb-pressure/zen-both-mixed.hex",
+    "bridge/fixtures/usb-pressure/zen-hello.hex",
+    "bridge/fixtures/usb-pressure/zen-left-tenth.hex",
+    "bridge/fixtures/usb-pressure/zen-neutral-first.hex",
+    "bridge/fixtures/usb-pressure/zen-ready.hex",
+    "bridge/fixtures/usb-pressure/zen-right-full.hex",
+    "bridge/fixtures/usb-pressure/zen-stop-max.hex",
+    "bridge/fixtures/usb-pressure/zen-stopped-max.hex",
+    "bridge/fixtures/usb-pressure/zen-unavailable.hex"
+  ],
+  "findings": [],
+  "manifest": [
+    {
+      "path": ".gitignore",
+      "bytes": 332,
+      "sha256": "8dd10640684d060e38e07b4965f16a6b8e28e91a4eb65e735247ed583b091163"
+    },
+    {
+      "path": "Configuration/Build.xcconfig",
+      "bytes": 107,
+      "sha256": "5a95b2789cdc2c63752ca80d0ad3f3de54ef7e32b5f992ef58c6d90ac39bd11e"
+    },
+    {
+      "path": "FAQ.txt",
+      "bytes": 16780,
+      "sha256": "64691f9eb1af724ff69404e187fac838c315df88b6fee0f242ad3e0a6f6a9676"
+    },
+    {
+      "path": "Packages/ControllerCore/Checks/main.swift",
+      "bytes": 13542,
+      "sha256": "defe9dbce6adcce5c77af059ed7358a9234129b49adc08bf6d47756edcaf820e"
+    },
+    {
+      "path": "Packages/ControllerCore/Package.swift",
+      "bytes": 582,
+      "sha256": "2147911353b1c150a897663da8bcb0a49216b4cad7262bc764fe9fec0a55da19"
+    },
+    {
+      "path": "Packages/ControllerCore/README.md",
+      "bytes": 461,
+      "sha256": "8ad314bdc4228e3922fec714e8db45ce334f69148ea47a33390bfdd69f8bf9f5"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/AndroidEditedExport.swift",
+      "bytes": 41819,
+      "sha256": "ab53b827b06335bc956a3065c3d57cce0bd788c06b85d4de467e1234a15dda96"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/AndroidExportBaseline.swift",
+      "bytes": 34158,
+      "sha256": "80717bb98cf941e35350ca5bf722d5fa198f19e85d563633509f6ec833e5342c"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/AndroidFloatingConversion.swift",
+      "bytes": 15643,
+      "sha256": "f456fbc39b4a87386934651e03d3b6ee6d186d0402494bcab87592b594d1ce98"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/AndroidFloatingExport.swift",
+      "bytes": 11787,
+      "sha256": "36f1a035d12d3c0f4cb386e8551cf550b75cac890640b68b9eb8593414da714d"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/AndroidFloatingRestoration.swift",
+      "bytes": 11078,
+      "sha256": "fd7675c37613371dc313a31160bb9e9567ec55e6e73ca401c573b4c7ef21df4e"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/AndroidProfileArchive.swift",
+      "bytes": 24692,
+      "sha256": "42cfa21592e37f56c39b7a10ee494ed7031df87ff3113f548d7cc00734090b78"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/AndroidProfileDocument.swift",
+      "bytes": 38065,
+      "sha256": "61e77069a9ffe34646765a8f9c14ea80d1661c007f4994c28943cb953092b5bf"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/AndroidProfileImport.swift",
+      "bytes": 42009,
+      "sha256": "c929b95865ddb0b02dc792be2b4420e520e2831d4b93e55ee9f80e4e5747b38f"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/AndroidSettingsPresetImport.swift",
+      "bytes": 13186,
+      "sha256": "b4b0533fab82a0be0dbf9bccb53e150743a8090a20b846c624f070307f31d691"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/AndroidTimingFormat.swift",
+      "bytes": 6980,
+      "sha256": "084f9a6d787b7147f3f6413e9368fefddf743e312206def1519bf8bab4a4a82c"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/BridgeOutputState.swift",
+      "bytes": 1988,
+      "sha256": "43328f576edf377926a4eed57eed89be44dce284f84d21753c8e03311dcef54f"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/BridgePacket.swift",
+      "bytes": 6431,
+      "sha256": "31956adc13752cd8209066f5ef7f069d6393a52446ebb4df8b9990f378cff8e8"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/BridgeProtocolVersion.swift",
+      "bytes": 460,
+      "sha256": "c2ae2ee5204a1f4826aef33deb2cb94aefb78c01f164cb292eb1de11bf668c24"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/BridgeSafetyMachine.swift",
+      "bytes": 4397,
+      "sha256": "0c8f4e09731f5e7b011ecb95c51932c180995a43fcf34974352933da483e6eea"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ButtonGestureRuntime.swift",
+      "bytes": 33936,
+      "sha256": "b8643b7d09c7dd6c33cf727518f7ea2fba23a48e54f220c9d303a6ab372f71f7"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ButtonGestureSettings.swift",
+      "bytes": 18881,
+      "sha256": "2680588684148cd0cfe7d3743083f9e1293e1434dd00f34548dcf57fe7eca0af"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/CameraFollowPracticeMachine.swift",
+      "bytes": 13281,
+      "sha256": "4d65f8fe0198a55bb05bb9d6357a96e50f02c1118b457fbb8d86fcd8dc488c56"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerBehaviors.swift",
+      "bytes": 12681,
+      "sha256": "13d4b1ac642ffacd54b6fcccb90ed9296fa7e92f19fe10ec0f52e74d833746ea"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerInputEngine.swift",
+      "bytes": 10091,
+      "sha256": "4cc4481f134ab969810bb87e4355c5c0638a96884432f920c3937bbad28b13f0"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerLayout.swift",
+      "bytes": 9978,
+      "sha256": "849eb0d0c0dac11ac2aab958ef07fabf0c85613d47699a1995beb88d526c7c8e"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerPages.swift",
+      "bytes": 18289,
+      "sha256": "843a311fc921399fabce03eeb88f918a5ad69ffc5778eb34f5339cf2e35d2fac"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerPayload.swift",
+      "bytes": 17717,
+      "sha256": "12476c911344e14827ee84cc661138ffcf6f53e547c90e1272e1569ac96b2c47"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerPresentationPreferences.swift",
+      "bytes": 3939,
+      "sha256": "524fb545071cc54b7b52af06c03b4a84773699ca9e69c36e354f19e69663c429"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerProfileBulkDeletion.swift",
+      "bytes": 2076,
+      "sha256": "87936aa1ec6ec08f7e24c720199c7987c074707d83efef1ac6c1ecc9a6fc5654"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerProfiles.swift",
+      "bytes": 51360,
+      "sha256": "778bde5c5fa00fba8708f741074ff8cce65d216ab7e0b2ff8f6512684898f9e6"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerSettingsPresets.swift",
+      "bytes": 17969,
+      "sha256": "1bbaff88992d4a5dd5799ac776e509ac8e18df400bf02d7f462fad0b4c42c541"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerSettingsSnapshots.swift",
+      "bytes": 16779,
+      "sha256": "7348fb1c0fe45838af4edc89432bb31108e0573590156785bce1cc4a7fc7b17c"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ControllerToolbarPlacement.swift",
+      "bytes": 7884,
+      "sha256": "8bb80b4f20049da705dbadbbf0e254966474229f95bfb5d8cc5a31ff455a8ab8"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FixedStickClaimLedger.swift",
+      "bytes": 3818,
+      "sha256": "240de0045c8a148349fbe2bc21f2ebff8c7bc5a927793059265aeb1b28f0fa86"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FixedStickMacro.swift",
+      "bytes": 3213,
+      "sha256": "498951a16a0ae2b585574e83dd01da099937e43d444f6ea341d4f668112e8754"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FloatingButtonSession.swift",
+      "bytes": 11680,
+      "sha256": "eedb7a3361b7d9b20c0b9e3ee3be6a02a3d180c211fc299904ca9c88893b12e7"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FloatingButtonSettings.swift",
+      "bytes": 11253,
+      "sha256": "08af790be2bf340eefd66646f0aaa599fb78c110688db6bc18653fe3d3dd5d47"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FloatingGeometry.swift",
+      "bytes": 6938,
+      "sha256": "717852282fb807d75ea7e3d2e4f20237a3d4c50ffcaa1c1e9c9192b8a4d02615"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FloatingProfileEditing.swift",
+      "bytes": 10129,
+      "sha256": "a6d0531cb420074d6050746630f1ebdefae025396ec8b15be56a76bd70f6799e"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FloatingRingGeometry.swift",
+      "bytes": 9348,
+      "sha256": "43788ac9f0b18a416ade5885d776faf6adf5ad828d04721b90fb386a89d46d34"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FloatingRingOutput.swift",
+      "bytes": 7627,
+      "sha256": "ec9416ccf7b1c26f8e1a53f8d652bf24698a8876ba5d3090d2e27e7abc918d07"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FloatingRingRuntime.swift",
+      "bytes": 44618,
+      "sha256": "d6e133a8be28cb8a41baa8abb0295c6b120863739305573c50c6e1e1e831800b"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FloatingRingSettings.swift",
+      "bytes": 46893,
+      "sha256": "4fb43d21b9f91a229ff61e7006ad03111e50db37f8dcb0baf8f0828eada5e978"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/FloatingRingZone.swift",
+      "bytes": 3247,
+      "sha256": "c922610b8217626db7385ad0862684c5434894542f0f911e3a36e2e47e690ee9"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/GamepadState.swift",
+      "bytes": 3218,
+      "sha256": "b6a8171f566b6bcccfdb14f34a825f54c41734f088cf5ab602185455cf8f4f4b"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/GestureDeadline.swift",
+      "bytes": 1199,
+      "sha256": "e45c691f3a9623a7ab588bbc33990ff8cd4b63ae2d59471bae768579967d4555"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/GlobalHoldPolicy.swift",
+      "bytes": 734,
+      "sha256": "d08395d530a5766663becbe278f233fc276343975cc2122dda169ea8f50e4d0c"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ModifiedPayloadRuntime.swift",
+      "bytes": 18266,
+      "sha256": "e61ac466746f1994e3d86f52675b7fbe609c40f45ed4aea6d5aef4bebfb6eb51"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/NativeProfileFileStore.swift",
+      "bytes": 9749,
+      "sha256": "72ef892bd0042d6a8ab37b17c05f55ca5aceb6960543576de6b1233d0d9296e6"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/OwnedGesturePayload.swift",
+      "bytes": 3131,
+      "sha256": "0093883ce5475337c866f69d52d9d3d61e709ac06cf3f3ee31c70b6c63aefcbc"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/PayloadCommandModifiers.swift",
+      "bytes": 4819,
+      "sha256": "58c17c5ab6b55c2e53eeab9999f506d807d0137d718a943440c0cb862d4bf09f"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/PracticeKeyboard.swift",
+      "bytes": 5223,
+      "sha256": "1381eb825472736d2015639bb4da19470c49fc03c2617ab6ce84be888a3acf7b"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ProfileControlDimensions.swift",
+      "bytes": 3294,
+      "sha256": "546ecc5300b5b0d760bb9e60b85276324ab8b2840c0f84e0fa702a4aecbfa9f1"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ProfileFloatingActions.swift",
+      "bytes": 2745,
+      "sha256": "2b29ef571ed1d3feebd343c08b6cb77b32478468e404b22c5e795a52391576ec"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ProfileInputEngine.swift",
+      "bytes": 115933,
+      "sha256": "c59744ddebbc9c3689b0338bff7f1609bb5746f1b1f3014a3e964745da0052d1"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ProfileSnapPolicy.swift",
+      "bytes": 978,
+      "sha256": "83874b33dd0e6f56b1ac8d8d589611c95c1b76b50d5c402f7b2d9fecf53b9708"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/ProfileSwipeRouter.swift",
+      "bytes": 5501,
+      "sha256": "3f8d1929f7a8dd10b7c0204ad60ab395d77e77fc0612c3cbcecb9663e6434cff"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/SCX2ClientMachine.swift",
+      "bytes": 9354,
+      "sha256": "262fa5fbd59484c43445d85f1461dfaccec3c778a778c17fd26826f8df32b9ed"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/SCX2Packet.swift",
+      "bytes": 11064,
+      "sha256": "edc46532e8d9362d95cd63ae50cdfe455a4ed49acff7334b19fe4482d2ab57ea"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/StickPlusRepeatClock.swift",
+      "bytes": 925,
+      "sha256": "68df7e8a9cdf232d204abf65bb34fff98a641bdbd04f48fff776aa0d43cdb538"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/StickResponseSettings.swift",
+      "bytes": 8421,
+      "sha256": "d42ce83c2a9004549741ea0caab8310b0d689ff7c9e18373c59c657d17868763"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/SustainedFixedStick.swift",
+      "bytes": 6110,
+      "sha256": "40c1140093bd53e1959ee8be5484d854b447d1803c4c32a22beec1bcd09c6bdd"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/TouchAimCalibrationAnalyzer.swift",
+      "bytes": 17662,
+      "sha256": "2360559a958af2fe9f735ecdab71f87a7a26973b92907b94aa5c378b272c923f"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/TouchAimDetector.swift",
+      "bytes": 13683,
+      "sha256": "e2666ca9aca4b26d401a09554975f3dc96a4a59fa4fdf28429990accf3bb9b8c"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/TouchAimInspector.swift",
+      "bytes": 2746,
+      "sha256": "9d5e53cab571d56c16fc90a9d314bd9985180ccc52a6a0d585db89d7c3048146"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/TouchAimMotionWindow.swift",
+      "bytes": 3545,
+      "sha256": "4c6aeb79f5b4cf01a431597f38c35c19f0790894cd4eb43e3c20e88ad0a1a460"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/TouchAimRuntime.swift",
+      "bytes": 15845,
+      "sha256": "61dc4b7609f83ba633864e62ccc56a8ab9a710c545717bce2cd47c181d8641b1"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/TouchAimSettings.swift",
+      "bytes": 28363,
+      "sha256": "2681596eb6d2308c419a8ba76274f43e7342871e9d8aece0087404917c908788"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/TouchpadBehavior.swift",
+      "bytes": 2700,
+      "sha256": "c55047dd3e6099b161d4604b94f33f39cba8c6152c5ce4ce924d0a8b7512ef37"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/TouchpadRuntime.swift",
+      "bytes": 6868,
+      "sha256": "52994d8762ab85b1e22fc0d7aec5f18ce30ac77c34df469a94b4b941475a7a9a"
+    },
+    {
+      "path": "Packages/ControllerCore/Sources/ControllerCore/WindowsPCProtocol.swift",
+      "bytes": 9278,
+      "sha256": "e563564568ee3fae404f152f9aeb2220d14810f17248f4f172ce15ceeb6f4454"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AdvancedStickTests.swift",
+      "bytes": 14359,
+      "sha256": "64cd92f9aba68269a9c9352fae48e5e43ca07b5eee8da8f1d30e72131c12081a"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidCameraFollowImportExportTests.swift",
+      "bytes": 6428,
+      "sha256": "2bee8258df87fd72d50f92da8dc1d204eb9f7c914ff5720252b63b957ebbf8eb"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidEditedExportTests.swift",
+      "bytes": 19196,
+      "sha256": "9c6660061db982655af654b8fa750dfa75e2fd674343314b65ca353e25b6d4d7"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidFloatingActionImportExportTests.swift",
+      "bytes": 6859,
+      "sha256": "0f5022c878c8f362ac4c24e82d3b67fdec9a1557f74659d8ec16eb2d4e0f1efe"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidFloatingImportExportTests.swift",
+      "bytes": 15470,
+      "sha256": "9e55b0c95ccdc6684b611ee057513ebecfdb9c4bf8c6355ca3b462b88d94b16b"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidFloatingRestorationTests.swift",
+      "bytes": 13950,
+      "sha256": "fc474ec950b03032c5efb61416d1ac18732504d6f8e70486cdad2309ee0449a2"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidOrientationDimensionsTests.swift",
+      "bytes": 6767,
+      "sha256": "aacba707de03e096754e152e98d15c4556bc8461c0847dcc9e397685903a2ab0"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidProfileArchiveTests.swift",
+      "bytes": 8899,
+      "sha256": "93df6718189d1af08b7db6cb452139218d47568cee51f8f125c6f8a02cc9d115"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidProfileDocumentTests.swift",
+      "bytes": 17689,
+      "sha256": "6c1560de9c638d85f804ee067cc5f77c8621aeaa30b4671b75e5860ec02b7487"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidProfileImportTests.swift",
+      "bytes": 14914,
+      "sha256": "d2d0ecfb59b711f784ced8cc932f8ca2707c3b1183b74cc24ca6ad5ebd7e0a71"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidProfileMetadataTests.swift",
+      "bytes": 10418,
+      "sha256": "ff6baf8a34665521faeaf548b783a04a7e7cb9c3597dd9f31d2aea71399490eb"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidSettingsPresetImportTests.swift",
+      "bytes": 13658,
+      "sha256": "a3ab9d3cae382b27f2087c53d33f61cfb7bc26fbce8c01c864ecebf5b8f2ac47"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/AndroidTouchAimImportTests.swift",
+      "bytes": 11171,
+      "sha256": "3d2d5f38077a4893c4baaa027cd57dbf45c6995fff0cf040448fe59e803a85d8"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/BridgeCodecTests.swift",
+      "bytes": 8276,
+      "sha256": "8e5deef2a09db8c4b032cdbd62fcbf5401aea0777b58277416c1c2625440d0d1"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/BridgeSafetyMachineTests.swift",
+      "bytes": 9029,
+      "sha256": "77905a85c8f9b7ff8b2cf648ec6391a428ba03ccd2a029dcfa0e51be7c412545"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ButtonGestureTests.swift",
+      "bytes": 23639,
+      "sha256": "3a7d18ba823b9845afa962d8dfeb71ec367ed595b4349e94854b978af57bee96"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/CameraFollowEngineTests.swift",
+      "bytes": 22188,
+      "sha256": "31f6482f3279a57b347f04cf1e86cd72f85a60ada6b6ea04e468d0323f43a537"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/CameraFollowPracticeTests.swift",
+      "bytes": 11095,
+      "sha256": "1965f252512a539c6ecc6548520aa49a67d2420acbb46467c73936ee00f8fc46"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ControllerBehaviorsTests.swift",
+      "bytes": 6934,
+      "sha256": "b65dca731e2ff41b5d75aadfc92cb70809b9a440262a792479c4a765cbd7fc71"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ControllerInputEngineTests.swift",
+      "bytes": 16845,
+      "sha256": "537ffa7f3aba18ee7ba6e5f62cd54f81e18e79163de176cc30d13a36b286d8c9"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ControllerLayoutTests.swift",
+      "bytes": 9482,
+      "sha256": "898d68320bf91b4abdefb4ffce102ba320c7557e246f02d6f8e7a7aaafa58810"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ControllerPagesTests.swift",
+      "bytes": 13029,
+      "sha256": "9dbb86ed48b2c30bbff8b52ac5dbfe7102cc1a91f50d785d86eee9aa5ca330ec"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ControllerPayloadTests.swift",
+      "bytes": 5571,
+      "sha256": "1055df4742a27422315d1a18233a2ffce7d587219d2d553a57ba4487483e1b8e"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ControllerProfileLibraryCapacityTests.swift",
+      "bytes": 5587,
+      "sha256": "5ae37101cd8000a89c8771ad84039fdbf1addedee5f7ee25470a23104090d272"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ControllerProfilesTests.swift",
+      "bytes": 11258,
+      "sha256": "3df9535e39594a3c1655e8888434bfbe51c6da6357eb6bfc0055280b87c858a9"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ControllerToolbarPlacementTests.swift",
+      "bytes": 22318,
+      "sha256": "75d2efe659777d84c6630db794b02d6bea8a192b8cc88a390659f559ab442bc1"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/DesktopPayloadTests.swift",
+      "bytes": 20180,
+      "sha256": "4db75174e180bcab07285b882540c3921f6a03836570bbc25055539cd20ee5ed"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/DoubleTapRepeatTests.swift",
+      "bytes": 16487,
+      "sha256": "36cc8148d3c0d1981f4e450b40d571b28cc9b0480d7ddce8156d2ccb412f8d00"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/FixedStickClaimLedgerTests.swift",
+      "bytes": 3809,
+      "sha256": "cf97c7587f4ac39283f3c96363d2131ac9d0c10cd210297fa0d9be82c219ff0d"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/FixedStickEngineTests.swift",
+      "bytes": 13613,
+      "sha256": "aa0f34cdf95e4d89b6678348e944d59d69907cc90c25f3351840407155a8674b"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/FixedStickMacroTests.swift",
+      "bytes": 2338,
+      "sha256": "bf27981be4212f69473ad66b10825cba293af9ac2b8ca4ca971708be01a802d2"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/FloatingActionEngineTests.swift",
+      "bytes": 15778,
+      "sha256": "42af92cdcb89b5a2c5465be3cf9cb59aae67ad9292a344e655a840c00e327432"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/FloatingButtonTests.swift",
+      "bytes": 17970,
+      "sha256": "33f7199e56cef67e6bfaad52f92dc329c04449cb61cfe525c1f5687c3f00eec6"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/FloatingEditingTests.swift",
+      "bytes": 5979,
+      "sha256": "177636e21a0e85ba3b5d76a727ab5bb40db32c409a8ddd61391fa2ec4d9b9eb9"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/FloatingModelTests.swift",
+      "bytes": 14015,
+      "sha256": "1c294dd2189fd3ba61aafaa908d0a815614c0d4c50a48ee63bd48ca08c5a212b"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/FloatingRingEngineTests.swift",
+      "bytes": 11456,
+      "sha256": "23f7f266b698e121f20b319f28543ae4b7b4382d312514b2d5247e60f7ff7b92"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/FloatingRingRuntimeTests.swift",
+      "bytes": 21296,
+      "sha256": "594896f56379438f44ab8f63da4fa9b0c54e1ea7dc17a1030a1c60145c26cc3e"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/FloatingRingSettingsTests.swift",
+      "bytes": 11644,
+      "sha256": "3aab06fe49db75851d8a824d57b999671a23d42372935090c70f017de6f264ef"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/GestureDeadlineTests.swift",
+      "bytes": 8966,
+      "sha256": "4988e5b9f73e198ec48c0e413f427518784e958fb875aaa6b2d5e853cadfe539"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/GlobalHoldEngineTests.swift",
+      "bytes": 5563,
+      "sha256": "7062b704256779b9925d0a897ac1ab76f063447d2c8285d5cf41ee4720691e93"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/LiveAutoCenterTests.swift",
+      "bytes": 15685,
+      "sha256": "8319be2ef0e026c8a23e2a92f997a544a558db420e7329155682d49d32c19335"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/MacroModeTests.swift",
+      "bytes": 14466,
+      "sha256": "a9cb3dd5cec259a6b3d18640ff9bec80116152e697f63f6cbbd8dc6925e3e101"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/MacroPersistenceTests.swift",
+      "bytes": 6565,
+      "sha256": "7b812daeaebcc4c820b9bb45cc3261c8fc28a2d2b3803672c45895d8c63f9b1d"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/NativeProfileFileStoreTests.swift",
+      "bytes": 12192,
+      "sha256": "27020ed1308a50801c83a3219208e333aaf3f1e3a35648f32af1ccace6954be0"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/PageInputEngineTests.swift",
+      "bytes": 11583,
+      "sha256": "dccb5dd343fe89d14687ccae47c83f70718f28cad46721d7ac38def4907e3cda"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/PayloadCommandTimingTests.swift",
+      "bytes": 16677,
+      "sha256": "225fede29fac08438c310f0a706c37ab820432d3ebb7e532a5dfef6ea972a95a"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/PresentationAndBulkDeletionTests.swift",
+      "bytes": 6845,
+      "sha256": "3ba4507a41d034a1ffb4b513db07c10ea08ddc639c3a9073f2c1bf37da792db3"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileHandoffTests.swift",
+      "bytes": 14813,
+      "sha256": "f714d6633a28a39250438c737c3429856d2447f75f9b69f362303d994b72e9e3"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileInputEngineTests.swift",
+      "bytes": 15118,
+      "sha256": "4c2799034edc1eaa5f2e2160bd50ab83a7913cdd7ffcc9d83a9737a166eb33d9"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfilePayloadEngineTests.swift",
+      "bytes": 16844,
+      "sha256": "dadb1dbe9dd90777cb09e93a290d1fd9205f01226f7946d03fee15f85d134f35"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileSnapPolicyTests.swift",
+      "bytes": 2089,
+      "sha256": "2f4520c2031331d1b9b443813908bdc72372c36c39184a9107dec60c0cdf7e7a"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileSwipeRouterTests.swift",
+      "bytes": 9377,
+      "sha256": "7ffec095ec7e927c5d678cfd128c261020c698606348d383688eafff4ce757fb"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionEighteenTests.swift",
+      "bytes": 7298,
+      "sha256": "ad1b0f8036a124f4884e508b72ff93a8cdf55341def19e1d78ca29f3ebf06832"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionElevenTests.swift",
+      "bytes": 5054,
+      "sha256": "bc1cb9e94119ed5adc29adc8f28e5dff96cd709b0a3a6456e9b94a86cafb6e32"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionFifteenTests.swift",
+      "bytes": 5784,
+      "sha256": "a040d274eadfb1ebc10ac2208a01cebda8b9eced18509a1f46b7347082728a7f"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionFiveTests.swift",
+      "bytes": 5097,
+      "sha256": "e03cb1ede591eedb4acbc6f2492293ff75bee2a26de6edd29b5b7d1160508be9"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionFourTests.swift",
+      "bytes": 5141,
+      "sha256": "095e107730b3889180bda677f2106fe8a17f638b7e3220c02e401443cc895e67"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionFourteenTests.swift",
+      "bytes": 3743,
+      "sha256": "15cb47b6ee9485a8f85ef553bd21e64e32893b26bc64bbb2f31b1ebdb859e0b7"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionNineTests.swift",
+      "bytes": 8206,
+      "sha256": "607abcfd0a84406f1025f036e0be7c13e270228d523da96a1aab20f0b0703d7a"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionNineteenTests.swift",
+      "bytes": 5432,
+      "sha256": "da91c7d7b97a9ba718c1e578b8f2546d90f262bd6ab530190a71d52043f8ab05"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionSevenTests.swift",
+      "bytes": 9586,
+      "sha256": "452e54ecdfa3d057b9e21a19b02f15bd1cb558b4d9323fd495e3c8a0c178703b"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionSeventeenTests.swift",
+      "bytes": 7225,
+      "sha256": "1fcd66b7d7ffca481ca00fa6b1dc8ad8c6e25f87f8c854a64ee2156e56d1778a"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionThirteenTests.swift",
+      "bytes": 4442,
+      "sha256": "66f6079ca1ef7a07b5a75295cfd67c6e71300b3775301065bc40c5a9e3a49c8d"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionThreeTests.swift",
+      "bytes": 4699,
+      "sha256": "df39cb7fd26ec07ec5e64bb051f7c4d7bc627a6edbc7bb9c5c0e5e78e9642c35"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionTwentyTests.swift",
+      "bytes": 7337,
+      "sha256": "cb04c1ca7ac60207d41918481e1c7a892ba55e84be9af7567939af87247d3f89"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ProfileVersionTwoTests.swift",
+      "bytes": 4783,
+      "sha256": "4ea5728ea82281e5b7d432fe08fc23f4cc4e40ccdead16c05ffe0a7f77a9c9ae"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/SCX2ClientMachineTests.swift",
+      "bytes": 7106,
+      "sha256": "3aa1e5eb754d584e66713fa5b3e3379cda98919e41def70708635420002fe9f7"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/SCX2CodecTests.swift",
+      "bytes": 6004,
+      "sha256": "f8571aebcd3a09ea32251fd17c7bb907d20dafa8a6b9fa2f7f8a39b84d2348b8"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/SCX2PressureTests.swift",
+      "bytes": 19114,
+      "sha256": "06082c00b10d20cbe226cdd658bc2735ddb9e93f3ac838748bd4c75239ab00e8"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/SCX2RecoveryHandshakeTests.swift",
+      "bytes": 3724,
+      "sha256": "af9549feedeecf01810b9ef59f3df3f8917471223f8869490e549b3cfbf01717"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/SCX2USBPressureTests.swift",
+      "bytes": 8456,
+      "sha256": "ba56a09beb0cc175b0a7533c3156d2ff2a564ef86470fa051985986744038939"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/SCX2USBTriggerTests.swift",
+      "bytes": 9069,
+      "sha256": "7e8e7936da3f5a0b05068050d2f19638d23dcce2db73c85c67f781ab358478dd"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/ScopedLeftRecenterTests.swift",
+      "bytes": 17395,
+      "sha256": "cf39ac05105f52eee09e5b34013ff9805c6a132d91a5fea823b025b6e09a6ebe"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/SettingsPresetTests.swift",
+      "bytes": 18259,
+      "sha256": "2ba190b42dfe462e42ba892e12e15d568eb7bf518c1c3d4111eddbae8e6f7e00"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/StickPlusRepeatTests.swift",
+      "bytes": 12385,
+      "sha256": "ecf49cc572c9d92b7508c922a5d56fddfdb896fac1b6fc08a8fd1d64bb79692e"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/SustainedFixedStickTests.swift",
+      "bytes": 19057,
+      "sha256": "5872a02d85c5ded0c522d8f2dcdaca6894080e8f24f843127c5e63249a6c3faf"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/TouchAimCalibrationTests.swift",
+      "bytes": 5066,
+      "sha256": "f4b11e61c77fcf9fc99ce89e2958dc6bebb0bd150343dafa922ba150c8541c7a"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/TouchAimDetectorTests.swift",
+      "bytes": 7673,
+      "sha256": "f60f46193b5e4ec6e791c81587724e55730a17c6c85af49db6a5ec7a9c4d037f"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/TouchAimEngineTests.swift",
+      "bytes": 9080,
+      "sha256": "bf2d908a8454fd05bfc2072672acc90a4e06224940e2f791a71b339fec0ef689"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/TouchAimMotionWindowTests.swift",
+      "bytes": 4477,
+      "sha256": "967fbf119b3d1945e811ae6b01e4df5fadddfa16326edb3d1f8ad323856e0a4e"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/TouchAimRuntimeTests.swift",
+      "bytes": 8829,
+      "sha256": "fa2e95ac0eadfbd155794cd1a1fdf135d31d4498ed0d785c8acde9a1b5ca9611"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/TouchAimStageTuningTests.swift",
+      "bytes": 4653,
+      "sha256": "fe66c683f57dfdc6ffb175c58b62ce911f2ef859d3e8ddb4aec86ae9f1ab8115"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/TouchpadInputTests.swift",
+      "bytes": 17954,
+      "sha256": "ee8bacf1259eed8d13d0aee2df339f43907efc9b84664aa56fb8b6a53e864658"
+    },
+    {
+      "path": "Packages/ControllerCore/Tests/ControllerCoreTests/WindowsPCProtocolTests.swift",
+      "bytes": 6000,
+      "sha256": "cd94190ffd2d3a3baf49d8b78aa6974050cb920dcde6662707ddca192aad0c11"
+    },
+    {
+      "path": "Packages/ControllerCore/run-checks.sh",
+      "bytes": 1191,
+      "sha256": "ed1a852de5da9bb751faee3d9ded2f378705d54031d5c6c7aa1706993c570aff"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16146,
+      "sha256": "84503be97eefd8e90ecc086f2673e765d03b291b0c4a725afa2e64854774c508"
+    },
+    {
+      "path": "SimpleController.xcodeproj/project.pbxproj",
+      "bytes": 29493,
+      "sha256": "c6eeadf1bd3b4bdc4d2ee554a85da55971184f9bb1c30792b180067741b1b7eb"
+    },
+    {
+      "path": "SimpleController.xcodeproj/xcshareddata/xcschemes/SimpleController.xcscheme",
+      "bytes": 2189,
+      "sha256": "aef3702962e1e9f7a4b062af78b60a13d00e2fc23ccb71d1cfb7504ede7c758c"
+    },
+    {
+      "path": "UPDATE-0.25.1.txt",
+      "bytes": 1457,
+      "sha256": "84f58fb72672e4f4fc0b658b3037bc7ad0e4960b2a5b0f7c67a7bcf5c4cc2482"
+    },
+    {
+      "path": "bridge/PROTOCOL.md",
+      "bytes": 16682,
+      "sha256": "78a36073dd95d9dae6c41c5f174169576a970d3934051d7e45cda8018ee57490"
+    },
+    {
+      "path": "bridge/firmware/CMakeLists.txt",
+      "bytes": 3873,
+      "sha256": "356e5ce702ebd9c54bc2513ad203d777b7ac0e5392899a430e2f725ec200d8a4"
+    },
+    {
+      "path": "bridge/firmware/README.md",
+      "bytes": 6353,
+      "sha256": "efc77388bbbee342237975672ef934913ac5b39eaf9475f94445c27e887fb276"
+    },
+    {
+      "path": "bridge/firmware/build-manifest.json",
+      "bytes": 1471,
+      "sha256": "46d22bc0159b8a1fabd6d7f2f6ee1427693560500b0d028f2fff47183942ff83"
+    },
+    {
+      "path": "bridge/firmware/build_private.py",
+      "bytes": 17009,
+      "sha256": "1cf5b85357a2cfb28a82cc456201af67623a2bd5b4a09471f0caf27e879999c3"
+    },
+    {
+      "path": "bridge/firmware/config.example.h",
+      "bytes": 432,
+      "sha256": "8c2dce73e17382f5f00676d7901fb1f82cf30382acb7cb9ee9de01e5d44fd621"
+    },
+    {
+      "path": "bridge/firmware/config.example.json",
+      "bytes": 238,
+      "sha256": "65333a858270bbe9701b98d762b1ee651a209dd9ec6ddb9b141918203e91df01"
+    },
+    {
+      "path": "bridge/firmware/listener_retry.hpp",
+      "bytes": 988,
+      "sha256": "a2400942dc5ca4160a2b8e707d18d61817e9a95d659502a20b4f626607882f69"
+    },
+    {
+      "path": "bridge/firmware/lwipopts.h",
+      "bytes": 774,
+      "sha256": "6b45b002bc207a26bedb8d1975aa9fef7c7f2639bce4e2f941cad8dba4cee9d6"
+    },
+    {
+      "path": "bridge/firmware/main.cpp",
+      "bytes": 16413,
+      "sha256": "f51b9b7e539e135f908da0d1a811e2746a39489a7fe0b767ba2455242824a645"
+    },
+    {
+      "path": "bridge/firmware/mcp4251_driver.hpp",
+      "bytes": 5443,
+      "sha256": "7f803c0449b7e10febb422e1022ddf46dd5fa039da071aad03851fdf4b558d4f"
+    },
+    {
+      "path": "bridge/firmware/pico_trigger_output.hpp",
+      "bytes": 3760,
+      "sha256": "3389122d0803ec1a1f006d1e41edddbd5635347cb6adb047b140f7a0358c1c0a"
+    },
+    {
+      "path": "bridge/firmware/tool-binaries.json",
+      "bytes": 2253,
+      "sha256": "230a61778c325ca17154a55d7ab5f06fee48c53d1d95b9b10410ff3bfdcf3599"
+    },
+    {
+      "path": "bridge/firmware/tusb_config.h",
+      "bytes": 411,
+      "sha256": "2f5446f939b48864739be9b99375b195412b9746a88bc14ea491839adffec86b"
+    },
+    {
+      "path": "bridge/firmware/usb_descriptors.cpp",
+      "bytes": 2637,
+      "sha256": "f43261bcca098fe1f06cb22c5fa8f42b3d5abbde08fd09b9fe88b20a35c17d68"
+    },
+    {
+      "path": "bridge/firmware/xinput_device.cpp",
+      "bytes": 5052,
+      "sha256": "748bad20f31161f9d0f9d92f3dafa3e55b47d15fd7a12499ff27bd3b01d4ac71"
+    },
+    {
+      "path": "bridge/firmware/xinput_device.hpp",
+      "bytes": 389,
+      "sha256": "e0a55ebaa5081718db8cbb1f356ec22016b1a7a6ba2d41b7cd367cb7a21ff61a"
+    },
+    {
+      "path": "bridge/fixtures/scx2-pressure-wire.json",
+      "bytes": 5382,
+      "sha256": "4b99f2b96219357f69d186da429f28316f7c0552102be1ae7f2773c5cac5a3bc"
+    },
+    {
+      "path": "bridge/fixtures/scx2-usb-pressure-wire.json",
+      "bytes": 6099,
+      "sha256": "af3e7f8d6eddcacf7ee63f88341623448d364bc161192d0f0274b87c16e61bbf"
+    },
+    {
+      "path": "bridge/fixtures/scx2-usb-trigger-wire.json",
+      "bytes": 6103,
+      "sha256": "d1576187f670baa1f7c8d9e57b9d85dada882b9accc41931802e5ff476e20859"
+    },
+    {
+      "path": "bridge/fixtures/scx2-wire.json",
+      "bytes": 4048,
+      "sha256": "6e52c2a1f0e258cacd72d74b78ea279b092c3d9bf3984246ec408e9daf29e5ed"
+    },
+    {
+      "path": "bridge/include/chair_relay_client.hpp",
+      "bytes": 7078,
+      "sha256": "982a7b2da4d512b4d3663f48edf82e282484f9f7e44454ad0dcda304e7ea10ea"
+    },
+    {
+      "path": "bridge/include/scx2.hpp",
+      "bytes": 4683,
+      "sha256": "7c56807c4f23eb2e359cc6d2d0e2caf2f20f93ecc47e25cb7fd033d7abe43187"
+    },
+    {
+      "path": "bridge/include/trigger_output.hpp",
+      "bytes": 1816,
+      "sha256": "6303b8f133d497efc1a9896f9e02a2e8551787dd226e520c8959a5988774c1da"
+    },
+    {
+      "path": "bridge/include/xinput_report.hpp",
+      "bytes": 1381,
+      "sha256": "3b3d23c92dde6c2ab1eb8812a226c28bbc863949ec45850d3666312d32a5453b"
+    },
+    {
+      "path": "bridge/run-chair-relay-checks.sh",
+      "bytes": 253,
+      "sha256": "32201a4e3e79ff7dfc5f3d021e15c0186c1792dcd526e36e1090eb92cc9677f8"
+    },
+    {
+      "path": "bridge/run-checks.sh",
+      "bytes": 1514,
+      "sha256": "aa1ce60f31d9aea887fd85a5cd2745d86ad82f06d141567524c3a0796a98482e"
+    },
+    {
+      "path": "bridge/run-discovery-checks.sh",
+      "bytes": 525,
+      "sha256": "37909b3a43c43c64f76dec27355b6a4de850cb615d49e02fb9fafa32d9f226d1"
+    },
+    {
+      "path": "bridge/run-listener-checks.sh",
+      "bytes": 492,
+      "sha256": "286c6fdca0ed8de745859c88cc99a976685075fe1a39adb2d72ae42ac9291b09"
+    },
+    {
+      "path": "bridge/run-mcp4251-checks.sh",
+      "bytes": 857,
+      "sha256": "70505095a33343280d62999fc765fae225f41a834a34ff40a26f30418d55b790"
+    },
+    {
+      "path": "bridge/run-radio-startup-checks.sh",
+      "bytes": 3074,
+      "sha256": "7e50c2ed16144fa61c6422bbbd9f31a15bcb8b8ae16d02d028bdda55eae3f189"
+    },
+    {
+      "path": "bridge/run-xinput-device-checks.sh",
+      "bytes": 536,
+      "sha256": "08c9cd68c4f7428cdc68ce56406f760a3c70e46f640ea22d23c2fc4bdea95fe7"
+    },
+    {
+      "path": "bridge/src/scx2.cpp",
+      "bytes": 14695,
+      "sha256": "5e794b5ca4d8353498c669c66e682ccd9df0cd1ed71759306ffe9c52065fa0d7"
+    },
+    {
+      "path": "bridge/tests/chair_relay_adapter_checks.cpp",
+      "bytes": 8729,
+      "sha256": "f17b21b5f6433578508c544d05a01a57b90c5db056acdb7fca1d7ace749b0fd9"
+    },
+    {
+      "path": "bridge/tests/chair_relay_checks.cpp",
+      "bytes": 9403,
+      "sha256": "7249d647e61bee71678e558afcde4da34eab3a1a34930ecb10ca903a7810dfe1"
+    },
+    {
+      "path": "bridge/tests/checks.cpp",
+      "bytes": 15460,
+      "sha256": "386ec72157c93f2f10a89bf186f99624950cc9af4f3fc5ae25d0909ead522b22"
+    },
+    {
+      "path": "bridge/tests/configure_wifi_checks.py",
+      "bytes": 13740,
+      "sha256": "fc416e20aba7ef306a685051b1cdb9ace13674572c301f13370db17e6aa7f3f1"
+    },
+    {
+      "path": "bridge/tests/discovery_checks.py",
+      "bytes": 9139,
+      "sha256": "d091e1f8bc88cf8c197da0922c3675da57ac92d1323b26e110bce5de4298d803"
+    },
+    {
+      "path": "bridge/tests/fake_pico/hardware/spi.h",
+      "bytes": 601,
+      "sha256": "84e7a175cc73107016404d40145bcddff576309bc651068969f91650f96ebb53"
+    },
+    {
+      "path": "bridge/tests/fake_pico/hardware/sync.h",
+      "bytes": 298,
+      "sha256": "f3c706441be919ed1e73c6a77200c6e1f661e270bbaed98df0fddb470b4f9e2e"
+    },
+    {
+      "path": "bridge/tests/fake_pico/pico/stdlib.h",
+      "bytes": 2311,
+      "sha256": "907711a962789bb42006fbdbdce878fad6299e8187e2d74c693f1c402249dacd"
+    },
+    {
+      "path": "bridge/tests/listener_retry_checks.cpp",
+      "bytes": 1300,
+      "sha256": "7a7f65538723f7861f607f18e2d6b94331711eab0b049fc4eebfd461129c2d91"
+    },
+    {
+      "path": "bridge/tests/lwip_pool_checks.cpp",
+      "bytes": 371,
+      "sha256": "9f060f991c7ee6d3a4342d775e266d1534580f238644207c9c4c8b0f98780116"
+    },
+    {
+      "path": "bridge/tests/mcp4251_checks.cpp",
+      "bytes": 17350,
+      "sha256": "79fa0eea7f28fa9e506c613636ae62ac8274339b71614a2db590cb1e724169f9"
+    },
+    {
+      "path": "bridge/tests/pico_trigger_gate_checks.cpp",
+      "bytes": 2820,
+      "sha256": "983efc42ed0b7f95295736d46988859d68b2b41338a2434c65a9147631ece432"
+    },
+    {
+      "path": "bridge/tests/pressure_checks.cpp",
+      "bytes": 13750,
+      "sha256": "ad0967ef00909852bfd932ca6fd0177ff055cf397397ccafc5838129de507f11"
+    },
+    {
+      "path": "bridge/tests/private_build_checks.py",
+      "bytes": 10554,
+      "sha256": "498463f89941e1b48952c13509411842c470399dcc07bf9ad3eacb94371d1b3a"
+    },
+    {
+      "path": "bridge/tests/radio_usb_startup_checks.cpp",
+      "bytes": 14262,
+      "sha256": "6584af09f17187464fbf3db4b7bc148be4adffd7a85d6849671b8a8b4392f47d"
+    },
+    {
+      "path": "bridge/tests/udp_loopback_peer.cpp",
+      "bytes": 9839,
+      "sha256": "1c6360565d069df9f1b6b8e42e0ddfe5f549c6bacb696e72fa98020c1ae57e07"
+    },
+    {
+      "path": "bridge/tests/usb_trigger_checks.cpp",
+      "bytes": 9255,
+      "sha256": "6af5f30f56e9442c6cc5847ad9fa1485cd9c78fc47e56542797e1e24323ad751"
+    },
+    {
+      "path": "bridge/tests/xinput_checks.cpp",
+      "bytes": 8971,
+      "sha256": "26e4d3bddf2dbac33ea48bdb290b1cbfd5baf1084b1a791dc3484c96b558fec2"
+    },
+    {
+      "path": "bridge/tests/xinput_device_checks.cpp",
+      "bytes": 8138,
+      "sha256": "f2cd9cea725527deab231155ecd5af37adc657848386bee621829017f01aa54f"
+    },
+    {
+      "path": "bridge/third_party_licenses/cyw43-LICENSE.RP.txt",
+      "bytes": 1789,
+      "sha256": "67aca4f10d9edf489871f64cd8f0dcd6c5df3e4ce75bd39e1914fc54f99e40b3"
+    },
+    {
+      "path": "bridge/third_party_licenses/cyw43-LICENSE.txt",
+      "bytes": 1654,
+      "sha256": "0ce42360898b7c3f168317b559d4783b55c892751580c2a12c76b548aa5858fb"
+    },
+    {
+      "path": "bridge/third_party_licenses/lwip-COPYING.txt",
+      "bytes": 1425,
+      "sha256": "ef4aac92e05e87cd1cdc140870ed52206ba03d4a7fe46c1e11d7ffa6c87d252b"
+    },
+    {
+      "path": "bridge/third_party_licenses/pico-printf-LICENSE.txt",
+      "bytes": 1080,
+      "sha256": "3fd3a80a06465d0b4affa1d1a16e18a8d2ef42a52eb52060109ae12f1f878f72"
+    },
+    {
+      "path": "bridge/third_party_licenses/pico-sdk-LICENSE.txt",
+      "bytes": 1489,
+      "sha256": "483f865953435b66c443dee7558debe3cc3cf8fcbb6a112fd9fc6a795d53f1f6"
+    },
+    {
+      "path": "bridge/third_party_licenses/tinyusb-LICENSE.txt",
+      "bytes": 1089,
+      "sha256": "b171720e8a442e7a3957d83c62cd3299dbb29da3db534cc626f9dded0de2ca44"
+    },
+    {
+      "path": "bridge/tools/configure_wifi.py",
+      "bytes": 13870,
+      "sha256": "69b6ce14f7e6c629849d9461a4f4a6d3e736da10c60a7f4eca59056912d7d01a"
+    },
+    {
+      "path": "bridge/tools/discover.py",
+      "bytes": 8519,
+      "sha256": "c9a07b839048b232a6ddcf05998adca7b2d1cdb200716076d9c55d4893c6f81d"
+    },
+    {
+      "path": "docs/CHAIR_RIGHT_STICK_RELAY.md",
+      "bytes": 5108,
+      "sha256": "0602de6ac8730d9c7f44b0745422ef9b3ad366ce78237cdb21453ceaf67605be"
+    },
+    {
+      "path": "docs/CRONUS_ZEN.md",
+      "bytes": 7234,
+      "sha256": "aab6cfa80c223f71b175149e83424f2d01d90b492159fac0421024c92bc22d6e"
+    },
+    {
+      "path": "docs/Feature-check-0.15.2.json",
+      "bytes": 312956,
+      "sha256": "b772b4f9f975a4709d0d1857ed2db8f169bd7374e0e6b214f21a158bf22eb50a"
+    },
+    {
+      "path": "docs/PRIVACY.md",
+      "bytes": 6603,
+      "sha256": "3634fb0174bc614e128d2b3eea3a8958a426ea00b4e60dba89dd1489ab64bf98"
+    },
+    {
+      "path": "docs/SUPPORT.md",
+      "bytes": 2480,
+      "sha256": "76f107ecc200ab68f61dbd668d8e85d313ada9f2a06b80af70baec699ea5389b"
+    },
+    {
+      "path": "docs/USB_TRIGGER_XBOX_ACCEPTANCE.json",
+      "bytes": 490,
+      "sha256": "cc30cd0506f537db3061f8c50b3b12045cf125550fcc54d00675e7ddd711d64b"
+    },
+    {
+      "path": "docs/images/all-controls.png",
+      "bytes": 216594,
+      "sha256": "81ce2c86d8147654ff6d947d06fcf266dedf3827582904552431105f87185f1d"
+    },
+    {
+      "path": "docs/images/controller-portrait.png",
+      "bytes": 305008,
+      "sha256": "31b0793e15d226d66e14f4e4d9a79b07324d19b0509499165d99e66b19fe13d3"
+    },
+    {
+      "path": "iOSApp/AdvancedButtonSettingsView.swift",
+      "bytes": 14373,
+      "sha256": "833bf17b9fbb02920a927c054ce0e4795f673516a199af91c54d60a7125bfe15"
+    },
+    {
+      "path": "iOSApp/AndroidEditedExportReviewView.swift",
+      "bytes": 3131,
+      "sha256": "6c9ad88bff8b58239ed25ea08b6e26544e11b3002356915eff31254fe03fe056"
+    },
+    {
+      "path": "iOSApp/AndroidImportReviewView.swift",
+      "bytes": 4013,
+      "sha256": "74a841d9746a7972f897eee2d5a1c6a98ec732e5bcb8cd2386f0aa33a205371f"
+    },
+    {
+      "path": "iOSApp/AppPrivacyView.swift",
+      "bytes": 20283,
+      "sha256": "f4bf7e90b55d8d6a58392af54667c15eb1215ade55816a0b0263b957fa6e6fba"
+    },
+    {
+      "path": "iOSApp/AppQuickStartView.swift",
+      "bytes": 13899,
+      "sha256": "a757ae427afab8dd734492bcfc4018728ddbc1eada4bca9168eaca1ca396c006"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/AppIcon.appiconset/AppIcon-1024@1x.png",
+      "bytes": 51767,
+      "sha256": "e94708d0d473e5ca17201279e93cf38d901b5cf0290b09e6fdc5878074a10b08"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x.png",
+      "bytes": 1777,
+      "sha256": "a3b5b1804b0a1d301eb33e69278a96e62b911c742e4ac4f9ce9c6c23b01d790b"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@3x.png",
+      "bytes": 2786,
+      "sha256": "5d12d1d1d79d1a035362cfa21006961e9ce7b7f9f2dbe89f5fb74d2fb8d9849f"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x.png",
+      "bytes": 2696,
+      "sha256": "fd9c462ad329aee4c9bef3913539fb59bf4d5ea9a106f682aa82c6c1e32811be"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@3x.png",
+      "bytes": 4443,
+      "sha256": "08138bb8bec6d5bf84f4c96ee196a9b5ae871d0d77871a9cc640c4f8fecac6c7"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x.png",
+      "bytes": 4031,
+      "sha256": "2756f6efc00037f336249543c239a753f6ac7b1e78b2b0273fc3a9a6490966d5"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@3x.png",
+      "bytes": 6373,
+      "sha256": "70847435c6a0ba067312d38e6567c369e15416df233da06fe4c953f005626b4c"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@2x.png",
+      "bytes": 6373,
+      "sha256": "70847435c6a0ba067312d38e6567c369e15416df233da06fe4c953f005626b4c"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@3x.png",
+      "bytes": 9576,
+      "sha256": "57515e0c5ac59fcc12bae18609d6ca165f23c360d332689ad7b167b7ca66156d"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "bytes": 1171,
+      "sha256": "ff9831d6523fb20d0e9a9c49805ff2008bf61b3ae5e00a318056adf7b29290bc"
+    },
+    {
+      "path": "iOSApp/Assets.xcassets/Contents.json",
+      "bytes": 60,
+      "sha256": "f5fb0e1f3a8142892ed092efb5955c1c2cc537003a89ad7bbdb9dade7fe8985f"
+    },
+    {
+      "path": "iOSApp/BehaviorSettingsView.swift",
+      "bytes": 13681,
+      "sha256": "d38057e83e198a069276f1885d8320601c61ff467ed83dbfe335ea090478a1b2"
+    },
+    {
+      "path": "iOSApp/CameraFollowPracticeView.swift",
+      "bytes": 3312,
+      "sha256": "726422d827ff5181c5a9620fc82d6483acbe78ff3e77fa2f9921e142070eb715"
+    },
+    {
+      "path": "iOSApp/CameraFollowSettingsView.swift",
+      "bytes": 3694,
+      "sha256": "d76fe9d73eb94b789dbc815c12e9fc672dc6f38d37ede92b58a5d61252f3ecfe"
+    },
+    {
+      "path": "iOSApp/ContentView.swift",
+      "bytes": 48404,
+      "sha256": "b1daa218d3e0ccce499014380b1e22c2badc1eeb160c4ea7812c18e98b4dae7c"
+    },
+    {
+      "path": "iOSApp/ControlOrientationSizeSettings.swift",
+      "bytes": 4371,
+      "sha256": "46123899725d008a2e9d0999e8ad804144d2b624c3a20a20d75f10a7cab0bdbb"
+    },
+    {
+      "path": "iOSApp/ControlPresetPickerView.swift",
+      "bytes": 5290,
+      "sha256": "ca9df6774cfead6f0b1ef01959dbeab6bd19052453953b10bb3ed86d38575b9c"
+    },
+    {
+      "path": "iOSApp/ControllerAppearancePalette.swift",
+      "bytes": 1356,
+      "sha256": "5214c6353193d70d09e748b94ecba4d5d45b370e6abdea527ca3ead9847d6e8c"
+    },
+    {
+      "path": "iOSApp/ControllerCanvas.swift",
+      "bytes": 29370,
+      "sha256": "1f05d486fe89ad42352a1f9c38a25d15d220a0baf8313a9340f50decf4410080"
+    },
+    {
+      "path": "iOSApp/ControllerOrientationAdapter.swift",
+      "bytes": 6098,
+      "sha256": "56ef2eaf8da1a4c8a1f722de5b49af959466ac1121ac68237f17d1bcdd755f9d"
+    },
+    {
+      "path": "iOSApp/ControllerViewModel.swift",
+      "bytes": 48125,
+      "sha256": "bbeb0c541f26ac39a6513008593ab8d34d2420360a9a8b85f2607202742c663d"
+    },
+    {
+      "path": "iOSApp/DisplaySettingsView.swift",
+      "bytes": 5365,
+      "sha256": "8b28aed2b2755b6c1546236c5b0c48f264e5870ff8a84bfc9574349007790f1e"
+    },
+    {
+      "path": "iOSApp/FloatingActionSettingsView.swift",
+      "bytes": 6241,
+      "sha256": "968fc807288298259676ed14b5b1544b41778b16547694a68fd31b522032f6b5"
+    },
+    {
+      "path": "iOSApp/FloatingCanvasOverlay.swift",
+      "bytes": 35063,
+      "sha256": "20c1f5b418065e5b52f919974bb9cc97604ceaa65ae84a84df1b31273a50627a"
+    },
+    {
+      "path": "iOSApp/FloatingControlsEditor.swift",
+      "bytes": 25581,
+      "sha256": "0e6d0ffc820f1e644e6a8e3e55c11d1f20e6a159b3c8a7a7426ae5ed1c44ae3b"
+    },
+    {
+      "path": "iOSApp/FloatingRingEditorView.swift",
+      "bytes": 45804,
+      "sha256": "c6dbe025a2ccedffcb642d73e46c1555e3edfb4beb69bac4456d822c07dc6731"
+    },
+    {
+      "path": "iOSApp/Info.plist",
+      "bytes": 1561,
+      "sha256": "53a0d32a1f111c4db08b0c9955156dba0408159b4a0d9bfa0242830043edcff5"
+    },
+    {
+      "path": "iOSApp/MovableControllerToolbar.swift",
+      "bytes": 18039,
+      "sha256": "33fb8ab468adedffb7cf685fe284af85cd01d0484408c3343ce4c6d53c1ffea6"
+    },
+    {
+      "path": "iOSApp/NativeProfileDocument.swift",
+      "bytes": 2841,
+      "sha256": "2419f366de3635f6ae1d04786e7ea1beccc21cd5e854d08696e77b00a1570cfe"
+    },
+    {
+      "path": "iOSApp/PracticeOutputView.swift",
+      "bytes": 9410,
+      "sha256": "935aba527451e9a84b6bc987a2ba88a41eef6327870c6c89d959875f2fcee9b8"
+    },
+    {
+      "path": "iOSApp/PrivacyInfo.xcprivacy",
+      "bytes": 981,
+      "sha256": "be1439f113d59c3ae237991c2116aa2019c19ec859acc5efd121f43fcbecbee4"
+    },
+    {
+      "path": "iOSApp/ProfileBulkDeleteView.swift",
+      "bytes": 4025,
+      "sha256": "0a688ff464b9ce7b12267b25a21bc751bec1a84a5eedca62567f57211198b5c4"
+    },
+    {
+      "path": "iOSApp/ProfileCanvas.swift",
+      "bytes": 73793,
+      "sha256": "e22519cfcd9320df8a6b101fba22b7ad912f8ea52818bb9a48e720bfe259b4d2"
+    },
+    {
+      "path": "iOSApp/ProfileControlEditor.swift",
+      "bytes": 75656,
+      "sha256": "9d4be7571dfa214fc9e175a5ca9f8afc6a0a090c52d3cd9945696eb168079d1b"
+    },
+    {
+      "path": "iOSApp/ProfileControllerViewModel.swift",
+      "bytes": 111091,
+      "sha256": "12929db6c49f1858fdf59e07e99dfc2349b961e0b593dc3fcf106036f0c81a17"
+    },
+    {
+      "path": "iOSApp/ProfileManagerView.swift",
+      "bytes": 18881,
+      "sha256": "17748a646a288973fce3a93d89e75e096da45ccf94b0d62a29afc3fa1e76f703"
+    },
+    {
+      "path": "iOSApp/ProfileOptionsView.swift",
+      "bytes": 7341,
+      "sha256": "35d6f7a969b4315b68471d0e5ea2437b7ad0142771e70bb8412c64a72e855891"
+    },
+    {
+      "path": "iOSApp/ProfilePagesView.swift",
+      "bytes": 7687,
+      "sha256": "5c3c193c16fbea89a17e3fcd05812e5efa1e60a4f2692665ed233e52de9146bc"
+    },
+    {
+      "path": "iOSApp/QuickStartProgress.swift",
+      "bytes": 3092,
+      "sha256": "3e1810e00db7cc257cf1da1cb73d22e8371bc4e1da872494c89e858a0dc0ff54"
+    },
+    {
+      "path": "iOSApp/RawRecoveryDocument.swift",
+      "bytes": 741,
+      "sha256": "6a9416ed3b3cd22458b41f0320279ff2166e8927bff3527631dd8e5a21174364"
+    },
+    {
+      "path": "iOSApp/RecoveryDocumentsView.swift",
+      "bytes": 6369,
+      "sha256": "13af102e7852b3ffb95cf7e0b092900a934830905a895be567fda77660aa64d2"
+    },
+    {
+      "path": "iOSApp/SaveControlPresetView.swift",
+      "bytes": 4991,
+      "sha256": "526b3dc2edf59e90cdd243c433da2fc671326b25a3dd9d2d0cb907246771e7a4"
+    },
+    {
+      "path": "iOSApp/SettingsPresetManagerView.swift",
+      "bytes": 9409,
+      "sha256": "28e0db1a1962b74eadec29da2d65b8004444668179bbaaf403f9c8e3b3d4e5cf"
+    },
+    {
+      "path": "iOSApp/SimpleControllerApp.swift",
+      "bytes": 245,
+      "sha256": "f0eeb49e871031d0456bfcd57f3360b317e3417a2a94e7b297aab74b0752e381"
+    },
+    {
+      "path": "iOSApp/TouchAimCalibrationView.swift",
+      "bytes": 16303,
+      "sha256": "9464f79acd5220deae08b902a6d310a17281349aa9c00573164831ff49296534"
+    },
+    {
+      "path": "iOSApp/TouchAimSettingsView.swift",
+      "bytes": 12875,
+      "sha256": "ed915f17d3351fb95d40e79a8961ccad9d29cc22060001266a2754bca3c8bcd3"
+    },
+    {
+      "path": "iOSApp/TouchMetricCapture.swift",
+      "bytes": 8136,
+      "sha256": "17fb78b4f15449299aad4e938d509999290174b6b6d98773f7b3d8a268a1a1a9"
+    },
+    {
+      "path": "iOSApp/UDPBridgeTransport.swift",
+      "bytes": 3167,
+      "sha256": "d67e8dda58be4603da611e5b20acfed10582d62651d39402b674c7ea6f80d944"
+    },
+    {
+      "path": "profiles/GTA-6-Prep.json",
+      "bytes": 223418,
+      "sha256": "60271f4ac6a2b622137f2a719514f3d682c7cdc273a284d1ffda4278ab34e1e9"
+    },
+    {
+      "path": "profiles/GTA-V-Left-side.json",
+      "bytes": 221303,
+      "sha256": "f2cb0ecad483484386c3d5fb422359e60ca1ebc8b6fdc1385cc5ba687dac8a96"
+    },
+    {
+      "path": "profiles/README.md",
+      "bytes": 663,
+      "sha256": "afbc385284ee39a86efc4d2505d7372a37fddfb5ac4ce2edc309d38735a83a59"
+    },
+    {
+      "path": "profiles/Starters/Open World.json",
+      "bytes": 145759,
+      "sha256": "07dd86ceb4ff6248ec78d0c9a32914a8299541d9522bc941134aeadecaf09b67"
+    },
+    {
+      "path": "profiles/Starters/Palworld.json",
+      "bytes": 185166,
+      "sha256": "15e03f5be6e755f99a7f3ec2e3c1aa120fa1808d5b71836306f8a55f867ff0a5"
+    },
+    {
+      "path": "profiles/Starters/Racing.json",
+      "bytes": 119126,
+      "sha256": "9d3815c96866bbdd19e28c4c3472bb669b9a34fd07f86e0bab62e85065087094"
+    },
+    {
+      "path": "profiles/Starters/Shooter.json",
+      "bytes": 123506,
+      "sha256": "9e97eedac28ff5b432d6bc90f540a8ae6e5fadfaf9e3ddea85499ce84b6dcefc"
+    },
+    {
+      "path": "profiles/Starters/Sports.json",
+      "bytes": 119091,
+      "sha256": "1ed8859caaaece335f9cedcde1505d655858013d37aaa1f774b15bcad782bfce"
+    },
+    {
+      "path": "receiver/.gitignore",
+      "bytes": 77,
+      "sha256": "4f3d87c2ec4039cfe99b9f7bc90ee471828be4a9dcd1a4bdd1d5409dc4f11b50"
+    },
+    {
+      "path": "receiver/README.md",
+      "bytes": 7256,
+      "sha256": "32e2b063ec403e7c1873e44f1122f722b4e1eb5c34258c8105207dfb468be233"
+    },
+    {
+      "path": "receiver/Setup-Windows-Receiver.bat",
+      "bytes": 233,
+      "sha256": "c2ab1ebb36310fa7e8a98177075e52f9ab7f9bb26c1aa4de94256832b4800f7b"
+    },
+    {
+      "path": "receiver/Start-Windows-Receiver.bat",
+      "bytes": 225,
+      "sha256": "056bf540aeef4ca399ff5fff4e8ef69be971c0e420fbe51091964fcf8f69fb62"
+    },
+    {
+      "path": "receiver/THIRD-PARTY-NOTICES.md",
+      "bytes": 1730,
+      "sha256": "49e78db08e630f60050af4ec5f6c27b917988d2ea2e023eb6a55bb4e04fcdc68"
+    },
+    {
+      "path": "receiver/VERIFICATION.md",
+      "bytes": 3371,
+      "sha256": "ce2ff73370590fc9690705be427b9b3cb391320a647a75b35a1a62ebbc2a16fe"
+    },
+    {
+      "path": "receiver/camera_follow.py",
+      "bytes": 8794,
+      "sha256": "88e472da732d8e5fc5649fb5ecb262c86ccef950621b451d93dad64c9e059207"
+    },
+    {
+      "path": "receiver/face_input_server.py",
+      "bytes": 42729,
+      "sha256": "bb3145f497c62ea4ef7721e223203ae08053b4b20afbb373d69263d2a8914fd2"
+    },
+    {
+      "path": "receiver/ios_pc_adapter.py",
+      "bytes": 4439,
+      "sha256": "114a76d971b976fa40609d29c2c211f61efbf849653d97f37f645a66435def39"
+    },
+    {
+      "path": "receiver/ios_pc_protocol.py",
+      "bytes": 7982,
+      "sha256": "39d107f9601e27e2d59c1d36b5ca440f21a0b1ba0d6946dec1a793c7dbe56845"
+    },
+    {
+      "path": "receiver/phone_output_protocol.py",
+      "bytes": 17479,
+      "sha256": "86f82291edfff0a6f0b7b3d8b1e320c1cc9efa3d71a233f582941d7e845909c2"
+    },
+    {
+      "path": "receiver/relative_mouse.py",
+      "bytes": 3259,
+      "sha256": "fb72916e56614351197017f829f10f5a3f619b91c06cc0d806b695cdac253438"
+    },
+    {
+      "path": "receiver/requirements-windows.txt",
+      "bytes": 150,
+      "sha256": "36102517896f0e3de27438986ac273780b7d7ec4c88f955cf2ddc87c6c02a258"
+    },
+    {
+      "path": "receiver/run_tests.py",
+      "bytes": 849,
+      "sha256": "f8acf88cdc7e2c8bb2ca5057239c879c2e543fc48b9b1a1d3058521de73e654d"
+    },
+    {
+      "path": "receiver/setup_receiver.py",
+      "bytes": 2334,
+      "sha256": "324f2fff7c3ec613de133ec3221704c8595b37004493707bc061a5b215640843"
+    },
+    {
+      "path": "receiver/simple_controller_receiver.py",
+      "bytes": 80217,
+      "sha256": "821c439f29e489185c23636527d75790892b509cf0b6a8f8ea760f54a910a8d9"
+    },
+    {
+      "path": "receiver/start_receiver.py",
+      "bytes": 1348,
+      "sha256": "22a8f4ac2a4a1c9923ef025e147531a77ad6dc9be265e67eaa04e1dd2ea7c7f5"
+    },
+    {
+      "path": "receiver/test_camera_follow.py",
+      "bytes": 4707,
+      "sha256": "344116e01440b67f2ec605742db98d3993f4912a1f479a37663fb7a972a338a3"
+    },
+    {
+      "path": "receiver/test_camera_follow_controls.py",
+      "bytes": 14959,
+      "sha256": "b809c1c8fee45086a2171446302525328d26c20ed12b6f43a131d733ee6253f7"
+    },
+    {
+      "path": "receiver/test_desktop_face_input.py",
+      "bytes": 23774,
+      "sha256": "39724035474f8a7a278fcddaf4a7ed04f36c27a4c8893ce95458f6154e9724e4"
+    },
+    {
+      "path": "receiver/test_dual_face_input.py",
+      "bytes": 16312,
+      "sha256": "0d409e12b8aaa17b7a5e5b6e8d4f8204d51c8ec0524ce860abcd2f7f99558675"
+    },
+    {
+      "path": "receiver/test_face_input_server.py",
+      "bytes": 16052,
+      "sha256": "c2011d0a783c2c414bb7a3bfbb931fa72240aa89ab832547af1faa406e99a0fd"
+    },
+    {
+      "path": "receiver/test_game_mouse_receiver.py",
+      "bytes": 11044,
+      "sha256": "dd1300326aa74418710c876e411413ba0d174b731302f3a5d39b0f349c78f94c"
+    },
+    {
+      "path": "receiver/test_ios_pc_protocol.py",
+      "bytes": 8140,
+      "sha256": "c053c7543a6d60e570384debea41b98453111ff2e532e592615cb5b94802b119"
+    },
+    {
+      "path": "receiver/test_ios_pc_receiver.py",
+      "bytes": 4150,
+      "sha256": "9d9644fc09fa194999375f0a5c1e555617e289ce5979a726cf4a7df9fb2bb67a"
+    },
+    {
+      "path": "receiver/test_movement_face_input.py",
+      "bytes": 19911,
+      "sha256": "7d9b7e4116af2219202d8a869cd1a04822c8abc38a3eddc3b2fba7d1e771a06e"
+    },
+    {
+      "path": "receiver/test_movement_receiver.py",
+      "bytes": 12117,
+      "sha256": "2197fb49e18a54930a8e6ab32ab34b301b95ae20acfe6cbd5c7bf5204bf70ec4"
+    },
+    {
+      "path": "receiver/test_pc_udp_peer.py",
+      "bytes": 1634,
+      "sha256": "7338ae103938bc3fc4eb7ea99286b1cf9d2a58cb5e0d895fe555ed1a03c4e390"
+    },
+    {
+      "path": "receiver/test_phone_lease.py",
+      "bytes": 3284,
+      "sha256": "687eafbd8e0b0d7ee69854e1aeed31bf05312360b6d1c1e62db5fef71614331e"
+    },
+    {
+      "path": "receiver/test_phone_output_protocol.py",
+      "bytes": 6778,
+      "sha256": "ef532b3b602366e7a17247f87996553d680302b8493d97efceda7bdf673acf78"
+    },
+    {
+      "path": "receiver/test_phone_output_receiver.py",
+      "bytes": 10444,
+      "sha256": "3638685613d1b2b0e30ecaae264ef644a9c91c0413ac102e816ee6caeb4a56b2"
+    },
+    {
+      "path": "receiver/test_receiver_release_all.py",
+      "bytes": 11779,
+      "sha256": "e86644f92572f70c89b18a2cc09f503899c1fb1837328a3e038eb40aaad23487"
+    },
+    {
+      "path": "receiver/test_voice_protocol.py",
+      "bytes": 22191,
+      "sha256": "a587e102ecc3281c5db56257fc2fbd4a9405de7f7bd758b5a7a03f177bcf71a4"
+    },
+    {
+      "path": "receiver/test_voice_receiver.py",
+      "bytes": 11699,
+      "sha256": "bb110fd4e36014d3380b85ffc1e9b7eb5a64205aea105e62100da0233128f56a"
+    },
+    {
+      "path": "receiver/test_windows_setup.py",
+      "bytes": 3911,
+      "sha256": "43da42cfd0227757604fbfec296c6235e0d0edb987c47dbe562f4335cf7e7c6b"
+    },
+    {
+      "path": "receiver/voice_input_server.py",
+      "bytes": 19213,
+      "sha256": "8385f94383b698ea8702943ce74303cca740686a0de48e19b3e4a75313723b0b"
+    },
+    {
+      "path": "scripts/android_preset_client_checks.swift",
+      "bytes": 10558,
+      "sha256": "68284e85d3c63b75bce451bd2907a2d30bf52ac5a67aa53be110f1463ed73702"
+    },
+    {
+      "path": "scripts/camera_client_checks.swift",
+      "bytes": 13912,
+      "sha256": "d68e1d83fe91fd259434686cca400aff20c46c93f43d75bd5d5686253c11978a"
+    },
+    {
+      "path": "scripts/check.sh",
+      "bytes": 6323,
+      "sha256": "a53af186eca866d887f637e8bb42dac4436790137a7d16817337e9ca96fcd81c"
+    },
+    {
+      "path": "scripts/check_gta_left_profile.swift",
+      "bytes": 19743,
+      "sha256": "f7ea3f7c491b299de6ae6a556d1cf8198b9b0bf11c260649061e0ed3c6cdad64"
+    },
+    {
+      "path": "scripts/check_gta_prep_profile.swift",
+      "bytes": 22992,
+      "sha256": "540876eaacce0df477496457f780e0b66d94537e838d674d7206250eb2a48837"
+    },
+    {
+      "path": "scripts/client_checks.swift",
+      "bytes": 31108,
+      "sha256": "114416241159b03d73a3a86c82a0cd2bc8e71f8edb231c87d01fc85920743ebc"
+    },
+    {
+      "path": "scripts/connection_intent_client_checks.swift",
+      "bytes": 34851,
+      "sha256": "7d297bd6fe028e6ef24ab1793df43f645b6944a0946e3ab318aa424558467438"
+    },
+    {
+      "path": "scripts/connection_udp_loopback_checks.swift",
+      "bytes": 12673,
+      "sha256": "dd14929b2f9f75d98e75e360130b8b83f7eb77cea380fc6d88d0b55cd78f9861"
+    },
+    {
+      "path": "scripts/floating_action_client_checks.swift",
+      "bytes": 6064,
+      "sha256": "2f6a80f56ef8e3f493799a9489527f2da803a42d78ff1ec37b1a2840b1ce8cbf"
+    },
+    {
+      "path": "scripts/floating_restoration_client_checks.swift",
+      "bytes": 6984,
+      "sha256": "e768614526f97cf21979c234e036da5e8e5ecbdc2bd79666f56d844f8fd2d56c"
+    },
+    {
+      "path": "scripts/gta6_driving_input_checks.swift",
+      "bytes": 13080,
+      "sha256": "b65159c398eab7f2ac609e4ece2fe40d1dd9b8c61daf06a74d8ed789e50affee"
+    },
+    {
+      "path": "scripts/gta6_driving_update_client_checks.swift",
+      "bytes": 8990,
+      "sha256": "e5b6d2af55bcf356fa44d3fd10ab75708e2d15ca4e6cd18f3ca402aeda32bcb5"
+    },
+    {
+      "path": "scripts/gta6_durable_update_client_checks.swift",
+      "bytes": 20066,
+      "sha256": "ce9584368ab3062e5c17752a7781143cd8c84d74cbff7c4b6a27d9c9a02c83c3"
+    },
+    {
+      "path": "scripts/gta6_walk_update_client_checks.swift",
+      "bytes": 16689,
+      "sha256": "812a62f57f2798fc6f27ced489c386d6b8a91ca8aabcd52aeaff7acd898855fe"
+    },
+    {
+      "path": "scripts/macro_client_checks.swift",
+      "bytes": 4247,
+      "sha256": "9a1c5836b860aed5282d905e424d290961b597c03e35fe4250a76271397b0b76"
+    },
+    {
+      "path": "scripts/make_gta_left_profile.swift",
+      "bytes": 7882,
+      "sha256": "76d3a5edd8ee1bde4293f8a23cfb88a19008067ec363e67ae59811f17d682ede"
+    },
+    {
+      "path": "scripts/make_gta_prep_profile.swift",
+      "bytes": 5855,
+      "sha256": "01de437ca1f5580160ce8cc6e6b42df49adb9f73215eb9063e54e8f470b3370b"
+    },
+    {
+      "path": "scripts/orientation_client_checks.swift",
+      "bytes": 6171,
+      "sha256": "3c002ad46da0d62499c92ac71447847ad774c705798bff7302bc0c2cb18917db"
+    },
+    {
+      "path": "scripts/pressure_udp_loopback_checks.swift",
+      "bytes": 18552,
+      "sha256": "76fe53f29f681121562226ccf80aaedf05c1d85421c4082f74e75abecf28ea45"
+    },
+    {
+      "path": "scripts/profile_client_checks.swift",
+      "bytes": 228969,
+      "sha256": "1f066a4fc94d01ce4b8535adf518ecbbfb4038f535dfafcff44b6b51436624f1"
+    },
+    {
+      "path": "scripts/profile_update_client_checks.swift",
+      "bytes": 23677,
+      "sha256": "d3cfe0ce0bf329954d1d3b3db9fd650cbda942a7cd3989f5290f0dd9018af60a"
+    },
+    {
+      "path": "scripts/quick_start_checks.swift",
+      "bytes": 2963,
+      "sha256": "23edb926164690b2291d8b1165d8fac71e242eaf85cf52931120b80f7ed757ab"
+    },
+    {
+      "path": "scripts/recovery_client_checks.swift",
+      "bytes": 5211,
+      "sha256": "9637add748733e5401d38ab5429b4293907ea74f22607de7509a5a499c3e935c"
+    },
+    {
+      "path": "scripts/starter_client_checks.swift",
+      "bytes": 4860,
+      "sha256": "70f63769f137ce154cba764f9162d18881f29283981a5ee8c8557db4c3066e26"
+    },
+    {
+      "path": "scripts/trigger_client_checks.swift",
+      "bytes": 10817,
+      "sha256": "1d58484136c07ce1ae75a7491f8fcd2d1f5b130caded9e51433f251c89b8464b"
+    },
+    {
+      "path": "scripts/udp_loopback_checks.swift",
+      "bytes": 9570,
+      "sha256": "6cdfa807c7a8b1e18e53383560f2da641025ef271314f51fadd332af9dd1382b"
+    },
+    {
+      "path": "scripts/usb_trigger_client_checks.swift",
+      "bytes": 14020,
+      "sha256": "4a2034be8cdd274960079d0346bf3ec57a0f3bda66d4ed7a3ef7bffbde5042b1"
+    },
+    {
+      "path": "scripts/usb_trigger_udp_loopback_checks.swift",
+      "bytes": 10905,
+      "sha256": "5cea8286d6b93a8acbf691bab63dd3c373d77eb49008b3c71f953f5cd02ad9a8"
+    },
+    {
+      "path": "scripts/windows_pc_client_checks.swift",
+      "bytes": 6846,
+      "sha256": "505385ae8bfaf02575313595236d2481aa9960ca0d411fc1ac527277a598b358"
+    },
+    {
+      "path": "scripts/zen_trigger_client_checks.swift",
+      "bytes": 7338,
+      "sha256": "32b380dd4a65a7d90a365a090c916d1e79d5f8ff9823c08e6ea781f14daabf9f"
+    },
+    {
+      "path": "scripts/zen_trigger_udp_loopback_checks.swift",
+      "bytes": 11957,
+      "sha256": "24741c55accba6e2596848ae03ca67582dfa8dd0d1e2786f829ef29ff3b4d565"
+    }
+  ]
+}

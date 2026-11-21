@@ -1,0 +1,8 @@
+November 8, 2026 — All-profile button swipe settings
+
+User explicitly requested enabling Swipe to activate on all buttons in every profile without moving anything. This supersedes the earlier GTA/test preservation constraint only for the requested swipe settings. iPhone 0.25.1 build 32 was installed in place and launched successfully.
+
+Actual fresh baseline contained 15 profiles/452 controls, including changes made by the user since0.25.0. All 339 button controls now have swipeActivationEnabled=true: 300 previously false flags changed. 14 profiles changed swipeMode from off to buttons; existing buttons/controls modes are preserved. No preset, starter template, position, size, action, mapping, ID, page, floating group or other profile field changed. Button Aim/directional pads, local actions and page shortcuts keep existing direct-touch routing; floating groupSwipe and finishIgnoresSwipes remain unchanged.
+
+Verification: 98 maintenance checks passed (72 prior + 26 new); exact production transformation matched independently generated expected JSON from the fresh phone baseline. Signed device build and strict signature passed. Actual phone saved-library comparison equals the expected transformation exactly; original raw bytes are in a new recovery entry. Normal relaunch preserves the full library and all app settings. The existing five-minute connection policy removed an expired bridge connection intent; no endpoint setting changed.
+
