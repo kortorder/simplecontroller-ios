@@ -15,6 +15,9 @@ import ControllerCore
 @MainActor final class PCCheckClock { var now=100.0 }
 @main struct WindowsPCClientChecks {
     @MainActor static func main() throws {
+        for route in [BridgeProtocolVersion.windowsPC, .macPC] { try run(route: route) }
+    }
+    @MainActor static func run(route: BridgeProtocolVersion) throws {
         var checks=0
         func check(_ value:@autoclosure()->Bool,_ label:String) { guard value() else { fatalError(label) }; checks += 1 }
         let suite="PCChecks.\(UUID())"
@@ -23,12 +26,14 @@ import ControllerCore
         defaults.set(BridgeTriggerMode.usbButtons.rawValue,forKey:"bridge.triggerMode")
         let link=PCCheckTransport(), clock=PCCheckClock()
         let model=ControllerViewModel(defaults:defaults,transport:link,clock:{clock.now},automaticTimer:false)
-        model.setBridgeProtocol(.windowsPC); model.host="127.0.0.1"
+        model.setBridgeProtocol(route); model.host="127.0.0.1"
         model.updateInput(.init(buttons:[.guide,.share]),epoch:model.inputEpoch)
         check(model.state.buttons == [.guide,.share] && model.controlsEnabled,"Practice keeps Guide and Share even when PC is the saved route")
         model.setMode(.bridge);model.connect()
         check(model.portText=="42734" && !model.controlsEnabled,"PC selects its port and waits for neutral handshake")
-        link.arm();check(model.isReady && model.allowsDesktopControls && model.allowsTriggerControls,"PC enables desktop and pressure after neutral ACK")
+        link.arm();check(model.isReady && model.allowsDesktopControls && model.allowsTriggerControls,"Computer route enables desktop and trigger controls after neutral ACK")
+        check(model.usesTriggerPressure == (route == .windowsPC), "Only Windows advertises analog gamepad pressure")
+        check(model.statusTitle == (route == .macPC ? "Mac receiver connected" : "Windows receiver connected"), "Connection status names the selected receiver")
         let held=BridgeOutputState(gamepad:.init(buttons:[.a,.guide,.share],leftStick:.init(x:0.4),rightStick:.init(y:0.8)),leftTrigger:0.35,rightTrigger:0.75)
         let desktop=PracticeOutputState(heldKeys:[.w,.leftControl],heldMouseButtons:[.right],pointerOffset:.init(dx:4.5,dy:-2),scrollOffset:40)
         model.updateOutput(held,desktop:desktop,epoch:model.inputEpoch)
@@ -74,6 +79,10 @@ import ControllerCore
         check(profileModel.practiceState == .neutral && profileModel.connectionRequested,"Profile Release all clears held keys/camera and preserves connection")
         check(defaults.data(forKey:ProfileControllerViewModel.libraryKey)==bytes,"PC transport never rewrites saved layouts")
         profileModel.stop()
-        print("PASS: \(checks) Windows PC actual-model checks; no Windows native output performed.")
+        let restored = ControllerViewModel(defaults: defaults, transport: PCCheckTransport(), clock: {clock.now}, automaticTimer: false)
+        check(restored.bridgeProtocol == route && restored.portText == "42734", "Saved Mac/Windows choice and port survive relaunch")
+        check(restored.bridgeTriggerMode == .usbButtons, "Restoring desktop mode never changes Pico trigger choice")
+        restored.stop()
+        print("PASS: \(checks) \(route.displayName) actual-model checks; no host native output performed.")
     }
 }
