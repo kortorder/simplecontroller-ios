@@ -87,6 +87,19 @@ final class WindowsPCProtocolTests: XCTestCase {
         XCTAssertEqual(BridgeProtocolVersion.windowsPC.defaultPort,42734)
         XCTAssertEqual(BridgeProtocolVersion.scx2.defaultPort,42736)
     }
+    func testDesktopRoutesKeepStableSavedValuesAndSharedWirePort() throws {
+        let decoder = JSONDecoder(), encoder = JSONEncoder()
+        for (raw, expected) in [("windowsPC", BridgeProtocolVersion.windowsPC), ("macPC", .macPC), ("scx2", .scx2), ("scx1", .scx1)] {
+            let original = Data("\"\(raw)\"".utf8)
+            XCTAssertEqual(try decoder.decode(BridgeProtocolVersion.self, from: original), expected)
+            XCTAssertEqual(try encoder.encode(expected), original)
+        }
+        XCTAssertTrue(BridgeProtocolVersion.macPC.isDesktopReceiver)
+        XCTAssertTrue(BridgeProtocolVersion.windowsPC.isDesktopReceiver)
+        XCTAssertFalse(BridgeProtocolVersion.scx2.isDesktopReceiver)
+        XCTAssertFalse(BridgeProtocolVersion.scx1.isDesktopReceiver)
+        XCTAssertEqual(BridgeProtocolVersion.macPC.defaultPort, 42734)
+    }
     func testCodecRejectsInvalidIdentitiesAndHugeData() throws {
         XCTAssertThrowsError(try WindowsPCCodec.encode(.init(kind:.hello,session:"not-a-session")))
         XCTAssertThrowsError(try WindowsPCCodec.decode(Data(repeating:32,count:8193)))
