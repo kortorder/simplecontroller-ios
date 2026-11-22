@@ -1,3 +1,5 @@
-246a9e70ed816cce672fe238f3a5ae58b19bac0fb9a41a50158d1200ae26add2  SimpleController-iOS-1.0.3-41-source.zip
-9e803ffb2ca7045c60dff68b1548a8641fb6477f0045db99a4975760f21b3a18  SimpleController-iOS-1.0.3-41-source.bundle
-6f41b2f23b9ee866c40f5f07f3fdb434ed419ae4f22834dacd2bd4876f37c165  PC-Receiver.zip
+99c67cc322d28b916d678920bb713aa3af0390033e6a4e0c475304bc69901b06  SimpleController-iOS-1.0.3-42-source.zip
+66c6a8604cf6b7525971b28f99571273cee8289cfa908e1c17c1e70153b1a5d0  SimpleController-iOS-1.0.3-42-source.bundle
+e0931fbcc71778f6d6da8369948a84f06d0b61c1bbba8fad9d0ae2446bbfea24  SimpleController-iOS-1.0.3-42-source-manifest.json
+5de8d2fb7a2a68e4b941e15526245aa8c31dd68278fbab29846b5f09619a5201  PC-Receiver.zip
+561225768df064377db7c49679a9bbe5a16d75b9337725a94b4d610b06c00afd  FAQ.txt

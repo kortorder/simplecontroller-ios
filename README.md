@@ -1,11 +1,5 @@
 # Simple Controller for iPhone
 
-**Install on iPhone:** [Get Simple Controller on the App Store](https://apps.apple.com/us/app/simple-controller/id6834564165).
-
-**Start here:** [Connection FAQ](FAQ.txt) · [Beginner videos](videos/README.md) · [Windows PC receiver download](PC-Receiver.zip).
-
-**Developer downloads:** [Version 1.0.3 (41) source ZIP](SimpleController-iOS-1.0.3-41-source.zip) · [Git bundle](SimpleController-iOS-1.0.3-41-source.bundle) · [SHA-256 checksums](SOURCE-SHA256SUMS.txt).
-
 Simple Controller turns an iPhone into a customizable, one-finger controller. Create profiles and pages, place buttons and sticks where they are comfortable, and try them in Practice. The app supports an optional Cronus Zen USB pressure mode, retains USB full-press LT/RT output and keeps your bridge connection enabled across pages, profiles and settings, and reconnects automatically when you reopen the app. Macro Mode and adjustable automatic release remain available. On first launch, swipe through the eight-page picture guide, then choose Shooter, Racing, Sports or Open World. Existing installations keep their profiles and can replay the guide through Support. To try another layout, tap **Profiles → Game starters** and choose a category. Each choice opens an editable personal copy.
 
 Shooter includes independent Aim and Fire and a combined pad. Racing lets one finger steer while pressing the throttle or brake. Sports offers movement, short and long passes, shooting and sprint. Open World has On foot and Drive pages. Every starter includes a Menus page with the Xbox D-pad, A, B, Menu and View. Button assignments depend on the game. Page changes release old actions and prepare the bridge automatically; no Connect tap is needed.
@@ -24,7 +18,7 @@ Shooter includes independent Aim and Fire and a combined pad. Racing lets one fi
 
 ## Find the controls
 
-The controller uses the full screen in version **1.0.3 (build 41)**. In Edit, drag a control to any edge; its frame stays inside the screen. Existing profiles retain their saved positions and settings, with normalized positions adapting to the larger surface. The iPhone's physical cutout and rounded corners still limit visible pixels.
+The controller uses the full screen in version **1.0.3 (build 42)**. In Edit, drag a control to any edge; its frame stays inside the screen. Existing profiles retain their saved positions and settings, with normalized positions adapting to the larger surface. The iPhone's physical cutout and rounded corners still limit visible pixels.
 
 The compact menu stays at the top while it is open. Tap **Hide** to replace it with a small, circular **Open menu** button showing three horizontal lines. Drag that 44-point circle to a comfortable place; tap it to reopen the menu at the top. Dragging the circle does not open the menu.
 
@@ -44,17 +38,20 @@ The top menu provides these shortcuts:
 
 - **Bridge** opens connection choices and settings. Its status is visible without scrolling.
 - **Profiles** selects a controller profile; **Page** switches pages within it.
-- **Camera** turns Camera Follow on or off in Practice or Windows PC mode. Camera strength is in Tools.
+- **Camera** turns Camera Follow on or off in Practice, Windows PC or Mac mode. Camera strength is in Tools.
 - **Tools** opens **All controls**, a full-height list with settings, camera strength, profiles, pages, Support and status.
-- **Support** is available in Bridge and All controls. Its **Learn / PC / Console** tabs include the picture guide, free Windows receiver instructions and links to the console bridge projects.
+- **Support** is available in Bridge and All controls. Its **Learn / PC / Console** tabs include the picture guide, free Windows and Mac receiver instructions and links to the console bridge projects.
 
-## Connect to a Windows PC without extra hardware
+## Connect to Windows or Mac without extra hardware
 
-Download **PC-Receiver.zip** from [Releases](https://github.com/kortorder/simplecontroller-ios/releases). Follow its [setup guide](receiver/README.md) on your Intel/AMD 64-bit Windows gaming PC, then open **Bridge → Bridge settings → Windows PC • free receiver** on the phone. Enter the PC's local IPv4 address and port **42734**. Save and connect. Keep the receiver open while playing.
+Download **PC-Receiver.zip** from [Releases](https://github.com/kortorder/simplecontroller-ios/releases) and follow the [receiver setup guide](receiver/README.md). Enter the computer's local IPv4 address and port **42734** in **Bridge → Bridge settings**. Keep the receiver open while playing. This is a free software route; no Pico or adaptive controller is needed.
 
-The receiver and its Python packages are free. Its free virtual Xbox-controller driver, ViGEmBus, is archived/end-of-life; install the official final release linked in the receiver guide and review its prompts yourself. No Pico or adaptive controller is required for PC play. The receiver is required software: an unprepared PC cannot receive controls automatically. Mac and Windows ARM game output are not supported by this package.
+- **Windows PC • free receiver** uses the virtual Xbox controller, keyboard and mouse. It supports analog sticks and adjustable trigger pressure. Install the official final ViGEmBus driver linked in the guide; this free driver is archived/end-of-life. Windows ARM is not supported.
+- **Mac • keyboard and mouse** uses the new Mac receiver. Start **Start-Mac-Receiver.command** on macOS 13 or later with Python 3.10 or later, follow its Accessibility permission instructions, and enter the Mac's address. Existing layouts map left stick to WASD, right stick to mouse movement, LT to right-click and RT to left-click. Buttons and the D-pad map to keys. Mappings are configurable on the Mac without changing your phone profiles.
 
-This mode supports gamepad controls with adjustable triggers, keyboard and mouse commands, touchpad movement/scrolling and Camera Follow. Xbox Guide/logo and Share remain unavailable through this PC route. A new connection starts neutral; a lost link clears phone input after a 500 ms receiver lease. Other independent assistive input owners keep their own inputs. This route has automated protocol, model and simulator checks; physical Windows driver/game acceptance remains to be tested.
+Mac output is keyboard/mouse, **not a native virtual Xbox controller**: movement keys and trigger clicks are digital, so analog steering/partial pressure and games requiring a gamepad are not supported by this route. Match the receiver mapping to each game's keyboard controls. Keyboard/mouse payloads, touchpads, holds, timed actions and Camera Follow remain available. Neither PC route sends Xbox Guide/logo or Share.
+
+A connection starts neutral, and a lost iPhone link clears phone input after a 500 ms receiver lease. Stop and app interruptions release phone actions. Protocol and automated input checks do not prove compatibility with every game; physical Windows driver/game acceptance remains separate.
 
 ## Beginner help and videos
 
