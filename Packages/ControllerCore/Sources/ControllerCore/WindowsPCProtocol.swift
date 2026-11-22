@@ -153,10 +153,10 @@ public struct WindowsPCClientMachine: Sendable {
         guard time.isFinite, time >= lastTime, time >= 0 else { return fail("Invalid PC connection clock.") }
         lastTime = time
         if phase == .connecting && time - started >= 3 {
-            return fail("No compatible Windows receiver replied. Start the updated free receiver and check its IP, port, Wi-Fi and firewall.")
+            return fail("No compatible computer receiver replied. Start the updated free receiver and check its IP, port, Wi-Fi and firewall.")
         }
         if (phase == .ready || phase == .neutralizing) && time - lastProgress >= Self.acknowledgmentTimeout {
-            return fail("The Windows receiver stopped replying. Controls released.")
+            return fail("The computer receiver stopped replying. Controls released.")
         }
         return nil
     }

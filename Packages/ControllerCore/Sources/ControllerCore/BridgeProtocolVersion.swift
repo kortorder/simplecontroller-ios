@@ -1,14 +1,16 @@
 import Foundation
 
 public enum BridgeProtocolVersion: String, CaseIterable, Codable, Sendable {
-    case scx2, scx1, windowsPC
+    case scx2, scx1, windowsPC, macPC
 
     public var displayName: String {
         switch self {
         case .scx2: "SCX2 • candidate Pico bridge"
         case .scx1: "SCX1 • legacy prototype"
         case .windowsPC: "Windows PC • free receiver"
+        case .macPC: "Mac • keyboard and mouse"
         }
     }
-    public var defaultPort: UInt16 { self == .windowsPC ? 42734 : self == .scx2 ? 42736 : 42735 }
+    public var isDesktopReceiver: Bool { self == .windowsPC || self == .macPC }
+    public var defaultPort: UInt16 { isDesktopReceiver ? 42734 : self == .scx2 ? 42736 : 42735 }
 }
