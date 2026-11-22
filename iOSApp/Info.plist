@@ -25,7 +25,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>Simple Controller sends your touch controls to the Windows PC receiver or console bridge you choose on your local network.</string>
+	<string>Simple Controller sends your touch controls to the Mac or Windows receiver or console bridge you choose on your local network.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

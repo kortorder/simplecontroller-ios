@@ -1,7 +1,7 @@
 import SwiftUI
 import ControllerCore
 
-/// Settings only: the parent engine enables execution for Practice or the Windows PC receiver.
+/// Settings only: the parent engine enables execution for Practice or a compatible computer receiver.
 @MainActor
 struct CameraFollowSettingsView: View {
     @Binding var control: ProfileControl
@@ -34,7 +34,7 @@ struct CameraFollowSettingsView: View {
                     Text("The first mouse output from this control pauses Camera Follow. Lifting your finger does not resume it. Use Release all, then enable Camera Follow again. Other controls keep their own mouse ownership.")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
-                Text("Camera Follow generates gentle horizontal right-stick movement from left-stick travel. Preview it in Practice or send it with the Windows PC receiver. A manual right-stick touch takes priority, even when centered. The console bridge does not send this generated movement.")
+                Text("Camera Follow generates gentle horizontal right-stick movement from left-stick travel. Preview it in Practice or send it with a compatible computer receiver. A manual right-stick touch takes priority, even when centered. The console bridge does not send this generated movement.")
                     .font(.footnote).foregroundStyle(.secondary)
             } label: {
                 Text(control.isCameraFollowAction ? "Camera Follow action" : "Camera Follow")

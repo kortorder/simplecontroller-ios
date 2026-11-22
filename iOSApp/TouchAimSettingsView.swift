@@ -116,7 +116,7 @@ struct TouchAimSettingsView: View {
             }
             Section {
                 Text("TouchAim starts only with a direct finger touch. It does not accept sliding from another control or simulated accessibility taps. Lifting centers aim. A Hold Release Delay can keep a trigger pressed briefly after you lift. Release all, editing and leaving the app cancel pending actions.")
-                Text("Payloads accept held controller, keyboard and mouse actions and trigger Pulse. WAIT, mouse UP and local commands are not supported here. Keyboard and mouse preview in Practice and work with the Windows PC receiver, which also supports adjustable triggers. For consoles, select the matching trigger output and Pico firmware: USB buttons send full presses; the Cronus Zen route or analog circuit supports adjustable pressure.")
+                Text("Payloads accept held controller, keyboard and mouse actions and trigger Pulse. WAIT, mouse UP and local commands are not supported here. Keyboard and mouse preview in Practice and work with a compatible computer receiver; Windows supports adjustable triggers, while Mac maps triggers to mouse clicks. For consoles, select the matching trigger output and Pico firmware: USB buttons send full presses; the Cronus Zen route or analog circuit supports adjustable pressure.")
             }
         }
     }

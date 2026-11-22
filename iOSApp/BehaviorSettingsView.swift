@@ -44,7 +44,7 @@ struct BehaviorSettingsView: View {
                 Section {
                     Text("Settings apply after you tap Done. Release all clears held buttons and retained stick positions.")
                     if control.isStick || [.leftTrigger, .rightTrigger, .guide, .share].contains(control) {
-                        Text("These LT and RT actions are full presses. They work in Practice, with the Windows PC receiver, or with the matching console trigger output selected in Bridge settings. Xbox logo and Share remain Practice only.")
+                        Text("These LT and RT actions are full presses. They work in Practice, with a compatible computer receiver, or with the matching console trigger output selected in Bridge settings. Xbox logo and Share remain Practice only.")
                     }
                 } header: { Text("Before using") }
             }

@@ -266,7 +266,7 @@ struct ContentView: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("Camera Follow").accessibilityValue(detail)
-        .accessibilityHint("Turn Camera Follow on or off in Practice or Windows PC mode. Strength is in All controls.")
+        .accessibilityHint("Turn Camera Follow on or off in Practice or computer receiver mode. Strength is in All controls.")
         .disabled(!inPractice || !model.controlsEnabled || model.cameraFollowSnapshot == nil)
     }
 
@@ -520,7 +520,7 @@ struct ContentView: View {
         NavigationStack {
             Form {
                 Section {
-                    Text(model.bridgeProtocol == .windowsPC ? "Start the updated free Windows receiver. Use its IPv4 address and port; the iPhone and PC must share your local network. No Pico or adaptive controller is needed for PC play." : "Use the Pico’s Wi-Fi address. Your iPhone and Pico must be on the same network.")
+                    Text(model.bridgeProtocol.isDesktopReceiver ? "Start the free receiver on your computer. Use its IPv4 address and port; both devices must share your local network. No Pico or adaptive controller is needed. Support → PC explains setup for Mac and Windows." : "Use the Pico’s Wi-Fi address. Your iPhone and Pico must be on the same network.")
                         .font(.subheadline)
                 }
                 bridgeAddress
@@ -547,16 +547,16 @@ struct ContentView: View {
     }
 
     private var bridgeAddress: some View {
-        Section(model.bridgeProtocol == .windowsPC ? "Your Windows PC" : "Your Pico") {
+        Section(model.bridgeProtocol == .macPC ? "Your Mac" : model.bridgeProtocol == .windowsPC ? "Your Windows PC" : "Your Pico") {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Wi-Fi address").font(.caption).foregroundStyle(.secondary)
-                TextField(model.bridgeProtocol == .windowsPC ? "PC IPv4 address" : "Bridge IPv4 address", text: $model.host)
+                TextField(model.bridgeProtocol.isDesktopReceiver ? "PC IPv4 address" : "Bridge IPv4 address", text: $model.host)
                     .keyboardType(.decimalPad)
                     .textContentType(.none)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
-                    .accessibilityLabel(model.bridgeProtocol == .windowsPC ? "PC IPv4 address" : "Bridge IPv4 address")
-                    .accessibilityHint(model.bridgeProtocol == .windowsPC ? "Enter the IPv4 address printed by the Windows receiver." : "Enter the bridge address provided during setup, not the Xbox console address.")
+                    .accessibilityLabel(model.bridgeProtocol.isDesktopReceiver ? "PC IPv4 address" : "Bridge IPv4 address")
+                    .accessibilityHint(model.bridgeProtocol.isDesktopReceiver ? "Enter the IPv4 address printed by the computer receiver." : "Enter the bridge address provided during setup, not the Xbox console address.")
             }
             VStack(alignment: .leading, spacing: 4) {
                 Text("Port").font(.caption).foregroundStyle(.secondary)
@@ -570,7 +570,9 @@ struct ContentView: View {
             Picker("Bridge protocol", selection: Binding(get: { model.bridgeProtocol }, set: { model.setBridgeProtocol($0) })) {
                 ForEach(BridgeProtocolVersion.allCases, id: \.self) { item in Text(item.displayName).tag(item) }
             }
-            Text(model.bridgeProtocol == .windowsPC
+            Text(model.bridgeProtocol == .macPC
+                 ? "Use the free Mac receiver on macOS 13 or later. Support → PC explains setup and Accessibility permission. Default port: 42734. Existing controller layouts map to keyboard and mouse: left stick → WASD, right stick → pointer, LT/RT → mouse clicks. Games must accept keyboard and mouse. No native Xbox gamepad or analog trigger pressure is created. Your saved layouts stay unchanged."
+                 : model.bridgeProtocol == .windowsPC
                  ? "Uses the updated free Windows receiver on the PC. Its default port is 42734; enter the port printed by the receiver. It releases this phone’s inputs if the connection is lost. Save and connect uses the typed address, and opening the app reconnects to your saved PC. Install the virtual-controller driver for gamepad output."
                  : model.bridgeProtocol == .scx2
                  ? "Pages, profiles and Stop (Release all) release inputs without disconnecting. Opening the app connects to your saved bridge with all controls released. Disconnect pauses until you leave and reopen. Practice stays offline until you choose Connect bridge."
@@ -613,20 +615,20 @@ struct ContentView: View {
                 bridgeAddress
                 bridgeOptions
                 Section {
-                    Text(model.bridgeProtocol == .windowsPC ? "Start the updated Windows receiver, enter its IP and port, then tap Bridge menu → Connect bridge. Practice stays offline." : "On the controller screen, tap Bridge menu, then Connect bridge. Practice works without a Pico.")
+                    Text(model.bridgeProtocol.isDesktopReceiver ? "Start the receiver on your computer, enter its IP and port, then tap Bridge menu → Connect bridge. Practice stays offline." : "On the controller screen, tap Bridge menu, then Connect bridge. Practice works without a Pico.")
                     Text("Allow Local Network access when iOS asks. Use the same trusted home network as the bridge.")
-                    Text(model.bridgeProtocol == .windowsPC ? "PC play uses your local network and free receiver software. No Pico, adaptive controller or console adapter is needed." : "The Xbox stays connected to your TV. Your Adaptive Controller connects the bridge to the console.")
+                    Text(model.bridgeProtocol.isDesktopReceiver ? "PC play uses your local network and free receiver software. No Pico, adaptive controller or console adapter is needed." : "The Xbox stays connected to your TV. Your Adaptive Controller connects the bridge to the console.")
                 } header: { Text("Before connecting") }
                 Section("Hardware requirements") {
                     Label("Practice mode works without a bridge", systemImage: "hand.tap")
-                    Label(model.bridgeProtocol == .windowsPC ? "Windows PC setup" : "The tested Xbox setup requires a Pico bridge and an Xbox Adaptive Controller", systemImage: model.bridgeProtocol == .windowsPC ? "desktopcomputer" : "wrench.and.screwdriver")
-                    Text(model.bridgeProtocol == .windowsPC ? "Install the compatible Windows receiver and its virtual-gamepad driver. Support → PC contains the download and setup guide. Allow the receiver on your private network; do not forward its port to the Internet." : "The Pico USB path through the Xbox Adaptive Controller has been tested on Xbox, including LT/RT press and release. Use the matching firmware and Xbox Accessories mappings. The Cronus Zen route still requires its physical Xbox check.")
+                    Label(model.bridgeProtocol.isDesktopReceiver ? "Mac and Windows setup" : "The tested Xbox setup requires a Pico bridge and an Xbox Adaptive Controller", systemImage: model.bridgeProtocol.isDesktopReceiver ? "desktopcomputer" : "wrench.and.screwdriver")
+                    Text(model.bridgeProtocol == .macPC ? "Start the free Mac receiver and grant the requested Accessibility permission so it can press keys and move the pointer. Support → PC has the download and guide. It does not install a virtual gamepad driver. Use a trusted private network." : model.bridgeProtocol == .windowsPC ? "Install the compatible Windows receiver and its virtual-gamepad driver. Support → PC contains the download and setup guide. Allow the receiver on your private network; do not forward its port to the Internet." : "The Pico USB path through the Xbox Adaptive Controller has been tested on Xbox, including LT/RT press and release. Use the matching firmware and Xbox Accessories mappings. The Cronus Zen route still requires its physical Xbox check.")
                 }
                 Section("Profiles and controls") {
                     Text("Use the profile button on the controller screen to create, copy, rename or switch profiles.")
                     Text("Tap Edit, then Add for a new control. Hold a control to change its name, size, actions or behavior, or to copy or delete it. Done updates the draft; Save layout keeps every change. Cancel on the controller restores the entire saved profile.")
                     Text("Portrait and landscape have separate positions. Each control can also use separate sizes; names and behaviors apply to both orientations.")
-                    Text(model.bridgeProtocol == .windowsPC ? "PC controller output keeps analog LT/RT values and timed pulses. Keyboard, mouse, touchpad and Camera Follow can also control the PC. Xbox Guide and Share are unsupported by this receiver." : "Custom payloads set trigger pressure and timed pulses. In Bridge settings, select USB buttons for full presses, USB adjustable for Cronus Zen, or Adjustable for the analog circuit. Use the matching Pico firmware. Practice needs no hardware.")
+                    Text(model.bridgeProtocol == .macPC ? "Mac maps controller buttons and sticks to configurable keyboard and mouse actions. LT/RT become mouse clicks, so 50% and 100% both press the assigned button. Keyboard, mouse, touchpad and Camera Follow work through the receiver. Guide and Share are unsupported." : model.bridgeProtocol == .windowsPC ? "PC controller output keeps analog LT/RT values and timed pulses. Keyboard, mouse, touchpad and Camera Follow can also control the PC. Xbox Guide and Share are unsupported by this receiver." : "Custom payloads set trigger pressure and timed pulses. In Bridge settings, select USB buttons for full presses, USB adjustable for Cronus Zen, or Adjustable for the analog circuit. Use the matching Pico firmware. Practice needs no hardware.")
                     Text("Profile options in Edit controls Turbo and sliding between controls. Each button can also use Auto-tap or Hold Toggle. Release all cancels every repeat and delayed action.")
                     if let message = model.message { Text(message).foregroundStyle(.secondary) }
                     Button("Restore profiles", role: .destructive) { confirmingProfilesRestore = true }
@@ -731,7 +733,7 @@ private struct BridgeActionMenu: View, Equatable {
         .menuOrder(.fixed)
         .accessibilityLabel("Bridge menu")
         .accessibilityValue(status)
-        .accessibilityHint("Connect to a Windows PC receiver or compatible console bridge, change connection settings, or use Practice.")
+        .accessibilityHint("Connect to a Mac or Windows receiver or compatible console bridge, change connection settings, or use Practice.")
         .disabled(editing)
     }
 }
@@ -787,7 +789,7 @@ private struct ControllerToolsPanel: View {
                                                  onEnable: model.setCameraFollowEnabled, onStrength: model.setCameraFollowStrength)
                     } else {
                         Text(model.isEditingLayout ? "Save or cancel your edits to use Camera Follow in Practice." :
-                             "Camera Follow works in Practice and Windows PC mode. It does not send camera movement to the Xbox bridge.")
+                             "Camera Follow works in Practice and computer receiver mode. It does not send camera movement to the Xbox bridge.")
                             .foregroundStyle(.secondary)
                     }
                 }
@@ -820,7 +822,9 @@ private struct ControllerToolsPanel: View {
                         Text("Held input active. Re-center stops sticks; Release all stops everything.")
                     }
                     if model.mode == .bridge {
-                        Text(model.usesWindowsPC
+                        Text(model.usesMacPC
+                             ? "The Mac receiver maps controller inputs to keys and mouse. Sticks and triggers are not an analog gamepad. Keyboard, mouse and touchpad work directly. Xbox Guide and Share are unavailable."
+                             : model.usesWindowsPC
                              ? "The Windows receiver supports controller, keyboard and mouse inputs. Xbox Guide and Share are not supported by that receiver."
                              : model.usesCronusZen
                              ? "LT/RT retain their pressure through the Zen Pico's USB output. Keyboard, mouse, Xbox and Share are Practice only."

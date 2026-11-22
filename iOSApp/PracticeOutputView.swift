@@ -143,7 +143,7 @@ struct PracticeOutputHistoryView: View {
             List {
                 Section {
                     Text("Opening this view released all controls. The values below were captured just before it opened.")
-                    Text("This history previews keyboard and mouse actions in Practice, where nothing is sent. Windows PC mode sends those actions to its receiver; the console bridge does not send them.")
+                    Text("This history previews keyboard and mouse actions in Practice, where nothing is sent. computer receiver mode sends those actions to its receiver; the console bridge does not send them.")
                 }
                 Section("At capture") {
                     LabeledContent("Keys", value: PracticeOutputFormatting.keys(snapshot.state))

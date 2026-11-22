@@ -951,9 +951,9 @@ final class ProfileCanvasView: UIView, UIGestureRecognizerDelegate {
                     element.accessibilityTraits = cameraFollowSnapshot?.requestedEnabled == true ? [.button, .selected] : [.button]
                     element.accessibilityValue = CameraFollowPresentation.status(cameraFollowSnapshot)
                     switch cameraCommands[id] {
-                    case .enable: element.accessibilityHint = "Double-tap turns Camera Follow on. It moves the right stick in Windows PC mode; Practice previews the output."
+                    case .enable: element.accessibilityHint = "Double-tap turns Camera Follow on. It moves the right stick in computer receiver mode; Practice previews the output."
                     case .disable: element.accessibilityHint = "Double-tap turns Camera Follow off."
-                    default: element.accessibilityHint = "Double-tap switches Camera Follow on or off. It moves the right stick in Windows PC mode; Practice previews the output. Release all turns it off."
+                    default: element.accessibilityHint = "Double-tap switches Camera Follow on or off. It moves the right stick in computer receiver mode; Practice previews the output. Release all turns it off."
                     }
                 } else if item.isTouchpad {
                     element.accessibilityTraits = [.allowsDirectInteraction]
@@ -962,7 +962,7 @@ final class ProfileCanvasView: UIView, UIGestureRecognizerDelegate {
                     else if pendingTouchpadLocks.contains(id) { values.append("Left lock pending") }
                     if activeTouchpads.contains(id) { values.append("Touch active") }
                     element.accessibilityValue = values.joined(separator: ", ")
-                    element.accessibilityHint = "Direct touch: slide one finger to move the pointer or scroll. Practice previews the output; Windows PC sends it to the receiver. Click behavior follows this pad's settings. Release all clears locks and pending clicks. Double-tap activation does not create a click."
+                    element.accessibilityHint = "Direct touch: slide one finger to move the pointer or scroll. Practice previews the output; computer receiver mode sends it to the receiver. Click behavior follows this pad's settings. Release all clears locks and pending clicks. Double-tap activation does not create a click."
                 } else if item.isStick {
                     element.accessibilityTraits = [.allowsDirectInteraction]
                     element.accessibilityHint = "Direct touch: drag from the center. Auto-center follows your saved settings unless changed by an in-game button. Release all clears retained input."

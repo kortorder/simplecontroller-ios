@@ -285,6 +285,8 @@ final class ProfileControllerViewModel: ObservableObject {
     var usesUSBButtonTriggers: Bool { connection.usesUSBButtonTriggers }
     var usesCronusZen: Bool { connection.usesCronusZen }
     var usesWindowsPC: Bool { connection.usesWindowsPC }
+    var usesMacPC: Bool { connection.usesMacPC }
+    var usesPCReceiver: Bool { connection.usesPCReceiver }
     var allowsDesktopControls: Bool { connection.allowsDesktopControls }
     var allowsTriggerControls: Bool { connection.allowsTriggerControls }
     func setBridgeTriggerMode(_ value: BridgeTriggerMode) { connection.setBridgeTriggerMode(value) }
@@ -436,7 +438,7 @@ final class ProfileControllerViewModel: ObservableObject {
         pendingTouchpadLocks = engine.pendingTouchpadLocks
         practiceState = engine.practiceState
         collectPracticeEvents()
-        connection.updateOutput(.init(gamepad: connection.usesWindowsPC ? practiceState.gamepad : engine.state,
+        connection.updateOutput(.init(gamepad: connection.usesPCReceiver ? practiceState.gamepad : engine.state,
                                       leftTrigger: practiceState.leftTrigger,
                                       rightTrigger: practiceState.rightTrigger), desktop: practiceState, epoch: connection.inputEpoch)
     }

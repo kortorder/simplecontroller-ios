@@ -179,19 +179,21 @@ final class ControllerViewModel: ObservableObject {
     var isReady: Bool { phase == .ready }
     private var activeTriggerMode: BridgeTriggerMode { endpoint?.resolvedTriggerMode ?? bridgeTriggerMode }
     var usesWindowsPC: Bool { wireProtocol == .windowsPC }
-    var allowsDesktopControls: Bool { mode == .practice || usesWindowsPC }
+    var usesMacPC: Bool { wireProtocol == .macPC }
+    var usesPCReceiver: Bool { wireProtocol.isDesktopReceiver }
+    var allowsDesktopControls: Bool { mode == .practice || usesPCReceiver }
     var usesCronusZen: Bool { wireProtocol == .scx2 && activeTriggerMode == .cronusZen }
     var usesTriggerPressure: Bool { usesWindowsPC || (wireProtocol == .scx2 && (activeTriggerMode == .adjustable || activeTriggerMode == .cronusZen)) }
     var usesUSBButtonTriggers: Bool { wireProtocol == .scx2 && activeTriggerMode == .usbButtons }
-    var allowsTriggerControls: Bool { usesTriggerPressure || usesUSBButtonTriggers }
+    var allowsTriggerControls: Bool { usesTriggerPressure || usesUSBButtonTriggers || usesMacPC }
 
     var statusTitle: String {
         if isEditingLayout { return "Editing layout • controls paused" }
         if mode == .practice { return "Practice • nothing is sent" }
         switch phase {
-        case .idle where usesWindowsPC: return "PC not connected"
-        case .connecting where usesWindowsPC: return "Waiting for Windows receiver"
-        case .ready where usesWindowsPC: return "Windows receiver connected"
+        case .idle where usesPCReceiver: return "Computer not connected"
+        case .connecting where usesPCReceiver: return usesMacPC ? "Waiting for Mac receiver" : "Waiting for Windows receiver"
+        case .ready where usesPCReceiver: return usesMacPC ? "Mac receiver connected" : "Windows receiver connected"
         case .idle: return "Bridge not connected"
         case .connecting: return "Waiting for the bridge"
         case .ready: return "Bridge is responding"
@@ -203,11 +205,13 @@ final class ControllerViewModel: ObservableObject {
         if let automaticConnectionIssue { return automaticConnectionIssue }
         if isEditingLayout { return "Drag to move. Hold a control to change its behavior. Rotate to arrange the other orientation, then tap Save." }
         if mode == .practice { return "Try the touch controls here. Nothing is sent to a PC or console." }
-        if usesWindowsPC {
+        if usesPCReceiver {
             switch phase {
-            case .idle: return "Start the free Windows receiver, then enter its IP address and port in Bridge settings."
-            case .connecting: return "Waiting for the updated Windows receiver and its neutral acknowledgment. Check the receiver window and private-network firewall access."
-            case .ready: return "Controller, adjustable triggers, keyboard and mouse use Wi-Fi. No Pico is needed. Keep the receiver running; game recognition depends on its virtual-controller driver."
+            case .idle: return "Start the free receiver on your computer, then enter its IP address and port in Bridge settings."
+            case .connecting: return "Waiting for the receiver and its neutral acknowledgment. Check the receiver window and private-network firewall access."
+            case .ready: return usesMacPC
+                ? "Mac keyboard and mouse output is active. Controller layouts map to keys and mouse: left stick moves, right stick aims, LT/RT click. No analog gamepad or trigger pressure. Keep the receiver running."
+                : "Controller, adjustable triggers, keyboard and mouse use Wi-Fi. No Pico is needed. Keep the receiver running; game recognition depends on its virtual-controller driver."
             case .stopped(let reason): return reason
             }
         }
@@ -284,7 +288,7 @@ final class ControllerViewModel: ObservableObject {
         var wireGamepad = accepted
         wireGamepad.buttons.subtract([.leftTrigger, .rightTrigger])
         func trigger(_ pressure: Double, button: PadButton) -> Double {
-            if mode == .practice || usesTriggerPressure { return pressure }
+            if mode == .practice || usesTriggerPressure || usesMacPC { return pressure }
             if usesUSBButtonTriggers { return pressure > 0 || accepted.buttons.contains(button) ? 1 : 0 }
             return 0
         }
@@ -294,7 +298,7 @@ final class ControllerViewModel: ObservableObject {
         pcOutputState = WindowsPCOutput(gamepad: wireGamepad,
                                         leftTrigger: outputState.leftTrigger, rightTrigger: outputState.rightTrigger,
                                         desktop: desktop)
-        if mode == .bridge && usesWindowsPC && !pcOutputState.isValid { pauseAfterFailure(reason: "Invalid desktop input. Controls released."); return }
+        if mode == .bridge && usesPCReceiver && !pcOutputState.isValid { pauseAfterFailure(reason: "Invalid desktop input. Controls released."); return }
         if isReady { sendState() }
     }
 
@@ -305,7 +309,7 @@ final class ControllerViewModel: ObservableObject {
     /// Retire queued old presses before a page, profile, editor or Release all.
     /// The user's connection intent survives; only a new neutral ACK permits input.
     func cancelQueuedInput(reason: String) {
-        if mode == .bridge, (wireProtocol == .scx2 || wireProtocol == .windowsPC), connectionRequested {
+        if mode == .bridge, (wireProtocol == .scx2 || wireProtocol.isDesktopReceiver), connectionRequested {
             if phase == .connecting || nextRetry != nil {
                 clearLocalInput() // The existing attempt contains neutral only; don't extend it.
             } else if foreground, endpoint != nil {
@@ -546,7 +550,7 @@ final class ControllerViewModel: ObservableObject {
         if endpoint.protocolVersion == .scx2 {
             scx2 = SCX2ClientMachine(revision: endpoint.resolvedTriggerMode.revision, at: now,
                                      waitForAvailability: automatic)
-        } else if endpoint.protocolVersion == .windowsPC {
+        } else if endpoint.protocolVersion.isDesktopReceiver {
             windowsPC = WindowsPCClientMachine(at: now)
         } else { session = UUID().uuidString }
         sequence = 0; lastAcknowledged = 0; acknowledgedPackets = 0

@@ -13,7 +13,7 @@ struct AppPrivacyView: View {
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                     Text("Published by the Simple Controller project.")
-                    Text("Simple Controller lets you create and use touch controller profiles on your iPhone. Practice works on your device. Connection mode sends inputs to the console bridge or Windows PC receiver address you configure. No account is required.")
+                    Text("Simple Controller lets you create and use touch controller profiles on your iPhone. Practice works on your device. Connection mode sends inputs to the console bridge or Mac/Windows receiver address you configure. No account is required.")
                 }
 
                 PrivacyPolicySection("Data stored and used on your device", paragraphs: [
@@ -29,7 +29,7 @@ struct AppPrivacyView: View {
                 ])
 
                 PrivacyPolicySection("Controller connections", paragraphs: [
-                    "When you connect a console bridge or Windows PC receiver, the app sends controller state, connection/session tokens, sequence numbers, and protocol messages to the configured IPv4 address and port, normally a device on your local network. Controller state includes supported buttons, sticks, directional-pad input, and trigger values. Windows PC mode also sends assigned keyboard keys, mouse buttons, pointer movement and scrolling. The receiving device replies with readiness and acknowledgment messages. This exchange operates the controller; it does not upload your profile library or imported originals to a developer service.",
+                    "When you connect a console bridge or Mac/Windows receiver, the app sends controller state, connection/session tokens, sequence numbers, and protocol messages to the configured IPv4 address and port, normally a device on your local network. Controller state includes supported buttons, sticks, directional-pad input, and trigger values. Computer receiver mode also sends assigned keyboard keys, mouse buttons, pointer movement and scrolling. The receiving device replies with readiness and acknowledgment messages. This exchange operates the controller; it does not upload your profile library or imported originals to a developer service.",
                     "The connection uses UDP and has no app-level encryption or authentication. Session tokens keep connection sessions separate; they are not an account or device identifier. The network and receiving device can see the packets and network addresses needed for the connection. Disconnecting or switching to Practice stops the controller connection. You can also revoke Local Network access in iOS Settings.",
                     "A bridge, PC receiver and their hardware or software may have their own data-handling behavior. This policy describes the iPhone app."
                 ])
@@ -130,23 +130,28 @@ struct AppHelpView: View {
     }
 
     @ViewBuilder private var pcSections: some View {
-        Section("Wireless Windows PC connection") {
+        Section("Wireless Mac and Windows connection") {
             Label("No Pico or adaptive controller needed", systemImage: "wifi")
-            Text("You still need the free compatible PC receiver software and its virtual-gamepad driver. The app connects to that receiver over your local network; it does not discover or install it automatically.")
-            ExternalSupportLink("Get the Windows PC receiver and setup guide", destination: SimpleControllerSupport.pcReceiver)
+            Text("Run the free receiver on your computer. Both devices must use the same trusted local network. The app does not install receiver software automatically.")
+            ExternalSupportLink("Get the Mac or Windows receiver and setup guide", destination: SimpleControllerSupport.pcReceiver)
         }
-        Section("Set up the connection") {
-            SupportStep(number: 1, title: "Start the receiver on Windows", detail: "Follow the receiver guide to install its required ViGEm virtual-gamepad driver. Keep the receiver open. If Windows asks, allow the receiver through the firewall on your trusted private network.")
-            SupportStep(number: 2, title: "Use the same network", detail: "Connect the iPhone and PC to the same trusted Wi-Fi or local network. A guest network may block devices from reaching each other.")
-            SupportStep(number: 3, title: "Copy the PC address into the app", detail: "Open Bridge menu → Bridge settings. Choose Windows PC • free receiver. Enter the IPv4 address and port displayed by the receiver. Its default port is 42734; use the displayed value if changed.")
-            SupportStep(number: 4, title: "Save and connect", detail: "Tap Save and connect. Allow Local Network access if iOS asks. Test an ordinary button, a stick and Stop before opening a game. The saved connection can reconnect when you reopen the app.")
+        Section("Mac: keyboard and mouse") {
+            SupportStep(number: 1, title: "Start the Mac receiver", detail: "On macOS 13 or later, follow the receiver guide to install Python 3.10 or later if needed, then open Start-Mac-Receiver.command. No virtual-gamepad driver or paid software is needed.")
+            SupportStep(number: 2, title: "Allow Accessibility access", detail: "When the receiver requests it, open System Settings → Privacy & Security → Accessibility. Enable its Terminal or Python entry, then restart the receiver. This lets your phone press keys and move the Mac pointer. Only grant access to the receiver you downloaded from this project.")
+            Text("Your existing controller layouts stay unchanged. By default, the left stick sends W/A/S/D, the right stick moves the mouse camera, LT holds right click to aim, and RT holds left click to fire. Open Configure-Mac-Receiver.command on the Mac to change these mappings in its visual editor. Keyboard, touchpad, clicks and scrolling also work directly.")
+            Text("Mac output is keyboard and mouse, not a virtual Xbox controller. Stick movement becomes digital keys, and trigger pressure becomes a click: 50% and 100% have the same effect. Choose games that accept keyboard and mouse. Xbox Guide and Share are unavailable. Support for a game's camera input must be checked in that game.")
         }
-        Section("What works") {
-            Text("The PC route supports the receiver’s Xbox buttons, sticks and adjustable LT/RT, plus keyboard, mouse and touchpad actions. The original receiver does not provide Xbox Guide or Share. Game controls and accepted inputs vary by game.")
-            Text("A saved 50% trigger value stays adjustable on this PC route. That is different from the Xbox Adaptive Controller’s USB-button mode, which presses LT/RT fully.")
+        Section("Windows: controller, keyboard and mouse") {
+            SupportStep(number: 1, title: "Start the Windows receiver", detail: "Follow the receiver guide to install its required ViGEm virtual-gamepad driver and start the receiver. If Windows asks, allow it through the firewall on your trusted private network.")
+            Text("Windows supports the receiver’s Xbox buttons, sticks and adjustable LT/RT, plus keyboard, mouse and touchpad. Guide and Share are unavailable. A saved 50% trigger value stays adjustable on this route. Game controls and accepted inputs vary by game.")
+        }
+        Section("Connect your iPhone") {
+            SupportStep(number: 1, title: "Use the same network", detail: "Connect the iPhone and computer to the same trusted Wi-Fi or local network. A guest network may block devices from reaching each other.")
+            SupportStep(number: 2, title: "Choose your computer", detail: "Open Bridge menu → Bridge settings. Choose Mac • keyboard and mouse or Windows PC • free receiver. Enter the IPv4 address and port displayed by the receiver. The default port is 42734; use the displayed value if changed.")
+            SupportStep(number: 3, title: "Save and connect", detail: "Tap Save and connect. Allow Local Network access if iOS asks. Test an ordinary button, a stick and Stop before opening a game. Stop releases phone actions. The saved connection can reconnect when you reopen the app.")
         }
         Section("If it does not connect") {
-            Text("Check that the receiver is running, that the IP address and port match, and that both devices are on the same network. Check Windows firewall and iOS Settings → Privacy & Security → Local Network. Do not expose the receiver to the public internet.")
+            Text("Check that the receiver is running, the IP address and port match, and both devices are on the same network. Check the computer's firewall, macOS Accessibility permission, and iOS Settings → Privacy & Security → Local Network. Do not expose the receiver to the public internet.")
             ExternalSupportLink("PC troubleshooting and FAQ", destination: SimpleControllerSupport.faq)
         }
     }

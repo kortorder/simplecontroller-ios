@@ -155,8 +155,8 @@ struct ProfileControlEditor: View {
             Text("Done updates this control in your layout draft. Then use Save layout on the controller screen to keep the changes, or Cancel there to restore the previous layout.")
             Text("Cancel here discards only the changes in this sheet. Name, output and behavior apply to both orientations. Positions differ; sizes can be shared or set separately for portrait and landscape.")
             if draft.kind == .button || draft.kind.isStick {
-                Text("LT and RT pressure and Pulse work in Practice and with the Windows PC receiver. For consoles, USB buttons send full presses; adjustable output needs the selected Cronus Zen route or analog trigger circuit and matching Pico firmware. Xbox logo and Share remain Practice only.")
-                Text("Practice previews keyboard and mouse actions on this phone. Windows PC mode sends them to the free receiver. The console bridge does not send keyboard or mouse input.")
+                Text("LT and RT pressure and Pulse work in Practice and with the Windows receiver. The Mac receiver maps trigger presses to mouse clicks, without analog pressure. For consoles, USB buttons send full presses; adjustable output needs the selected Cronus Zen route or analog trigger circuit and matching Pico firmware. Xbox logo and Share remain Practice only.")
+                Text("Practice previews keyboard and mouse actions on this phone. computer receiver mode sends them to the free receiver. The console bridge does not send keyboard or mouse input.")
             }
         } header: { Text("Keeping your changes") }
 
@@ -405,7 +405,7 @@ struct ProfileControlEditor: View {
             Section {
                 Text("Add a regular button with the payload SCROLL_MODE_TOGGLE. Tap it to switch all touchpads between pointer movement and vertical scrolling. Release all returns to pointer mode.")
                 Text("For a right click, add a button with MOUSE_RIGHT_DOWN,MOUSE_RIGHT_UP. Use MOUSE_MIDDLE_DOWN,MOUSE_MIDDLE_UP for a middle click.")
-                Text("Practice previews touchpad movement, clicks and scrolling without moving another device. Windows PC mode sends them to the receiver to control the PC. The console bridge does not send touchpad input.")
+                Text("Practice previews touchpad movement, clicks and scrolling without moving another device. computer receiver mode sends them to the receiver to control the PC. The console bridge does not send touchpad input.")
             } header: { Text("Scrolling and other clicks") }
         }
     }
@@ -452,7 +452,7 @@ struct ProfileControlEditor: View {
                     Text("Directional buttons and Button Aim always keep their starting touch and reject sliding entry. This setting is kept for use if you turn those modes off.")
                 }
                 if draft.isCameraFollowAction {
-                    Text("Camera Follow requires a direct tap. Preview it in Practice or use it with the Windows PC receiver; it is unavailable through the console bridge.")
+                    Text("Camera Follow requires a direct tap. Preview it in Practice or use it with a compatible computer receiver; it is unavailable through the console bridge.")
                 }
                 if draft.isScrollModeToggle {
                     Text("Scroll mode toggle always requires a direct tap, regardless of this setting.")
@@ -460,7 +460,7 @@ struct ProfileControlEditor: View {
             }
             Section {
                 Toggle("Custom payload", isOn: customPayloadEnabled)
-                    .accessibilityHint("Use controller, keyboard or mouse commands instead of the checkbox actions. Keyboard and mouse preview in Practice and work with the Windows PC receiver; the console bridge does not send them.")
+                    .accessibilityHint("Use controller, keyboard or mouse commands instead of the checkbox actions. Keyboard and mouse preview in Practice and work with a compatible computer receiver; the console bridge does not send them.")
                 if draft.payload != nil {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Payload")
@@ -471,7 +471,7 @@ struct ProfileControlEditor: View {
                             .textInputAutocapitalization(.never)
                             .autocorrectionDisabled()
                             .accessibilityLabel("Button payload")
-                            .accessibilityHint("Separate actions and WAIT commands with commas. Keyboard and mouse preview in Practice and work with the Windows PC receiver; the console bridge does not send them. Trigger Pulse uses P followed by seconds.")
+                            .accessibilityHint("Separate actions and WAIT commands with commas. Keyboard and mouse preview in Practice and work with a compatible computer receiver; the console bridge does not send them. Trigger Pulse uses P followed by seconds.")
                         if let error = payloadValidationMessage {
                             Label(error, systemImage: "exclamationmark.triangle")
                                 .foregroundStyle(.orange)
@@ -487,7 +487,7 @@ struct ProfileControlEditor: View {
             footer: {
                 if draft.payload != nil {
                     Text("The custom payload replaces this button's checkbox actions. Turning it off returns to those saved choices.")
-                    Text("Keyboard and mouse preview in Practice and work with the Windows PC receiver; the console bridge does not send them. UP is the keyboard Up arrow; X360UP is controller D-pad Up.")
+                    Text("Keyboard and mouse preview in Practice and work with a compatible computer receiver; the console bridge does not send them. UP is the keyboard Up arrow; X360UP is controller D-pad Up.")
                 } else {
                     Text("Select one or more controller actions to hold together. No selection means this button sends no action. Each copy has its own settings.")
                 }
@@ -626,7 +626,7 @@ struct ProfileControlEditor: View {
             Text("An ordinary button holds the left stick halfway forward and the right stick fully right. Use LS or RS, a direction (UP, DOWN, LEFT, RIGHT, UR, UL, BR or BL), and 0–100 percent. The first live touch keeps its stick channel; another held command cannot take it over.")
                 .font(.footnote).foregroundStyle(.secondary)
             Text("SHIFT,W").font(.footnote.monospaced()).textSelection(.enabled)
-            Text("Preview Shift and W together in Practice, or send them with the Windows PC receiver.")
+            Text("Preview Shift and W together in Practice, or send them with a compatible computer receiver.")
                 .font(.footnote).foregroundStyle(.secondary)
             Text("X360A(U100),X360A(D500)(U100),X360B(D800)(U100)")
                 .font(.footnote.monospaced()).textSelection(.enabled)
@@ -822,7 +822,7 @@ struct ProfileControlEditor: View {
                 } header: { Text("Actions for \(directionTitle(direction).lowercased())") }
                 footer: {
                     Text("An empty stage holds no actions. Custom payloads replace that stage's checkbox actions; turning Custom off restores the saved choices. These actions do not use the settings of other on-screen buttons.")
-                    Text("Stages accept controller actions, trigger pressure, keyboard keys and mouse DOWN commands. Add (U100) to tap an action for 100 ms. A stage may also use an auto-center command by itself. WAIT, ordinary Pulse and mouse UP are unavailable. Keyboard and mouse preview in Practice and work with the Windows PC receiver; the console bridge does not send them.")
+                    Text("Stages accept controller actions, trigger pressure, keyboard keys and mouse DOWN commands. Add (U100) to tap an action for 100 ms. A stage may also use an auto-center command by itself. WAIT, ordinary Pulse and mouse UP are unavailable. Keyboard and mouse preview in Practice and work with a compatible computer receiver; the console bridge does not send them.")
                 }
                 extendedBoostSettings
                 Section {
@@ -993,7 +993,7 @@ struct ProfileControlEditor: View {
         case .stickPlus:
             return "Moves the selected controller stick and adds the actions configured for each direction and distance. Changing modes keeps your mappings."
         case .directional:
-            return "Sends only the configured directional actions, with no analog stick movement. Changing modes keeps your mappings. Use the optional WASD preset below to preview keyboard controls in Practice or send them with the Windows PC receiver."
+            return "Sends only the configured directional actions, with no analog stick movement. Changing modes keeps your mappings. Use the optional WASD preset below to preview keyboard controls in Practice or send them with a compatible computer receiver."
         }
     }
 
@@ -1013,7 +1013,7 @@ struct ProfileControlEditor: View {
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
                     .accessibilityLabel("\(directionTitle(direction)) \(title.lowercased()) payload")
-                    .accessibilityHint("Enter comma-separated held actions, or leave empty for no actions. Keyboard and mouse preview in Practice and work with the Windows PC receiver; the console bridge does not send them.")
+                    .accessibilityHint("Enter comma-separated held actions, or leave empty for no actions. Keyboard and mouse preview in Practice and work with a compatible computer receiver; the console bridge does not send them.")
                 Menu("Use auto-center for this stage") {
                     Button("Toggle auto-center") { stagePayloadText(stage).wrappedValue = "AUTO_CENTER_TOGGLE" }
                     Button("Turn auto-center on") { stagePayloadText(stage).wrappedValue = "AUTO_CENTER_ON" }
