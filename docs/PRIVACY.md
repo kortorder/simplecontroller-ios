@@ -2,7 +2,7 @@
 
 Updated November 21, 2026. Published by the Simple Controller project.
 
-Simple Controller lets you create and use touch controller profiles on your iPhone. Practice works on your device. Connection mode sends inputs to the console bridge or Windows PC receiver address you configure. No account is required.
+Simple Controller lets you create and use touch controller profiles on your iPhone. Practice works on your device. Connection mode sends inputs to the console bridge or Windows or Mac receiver address you configure. No account is required.
 
 ## Data stored and used on your device
 
@@ -22,7 +22,7 @@ If you select iCloud Drive, another file provider, or a sharing destination, tha
 
 ## Controller connections
 
-When you connect a console bridge or Windows PC receiver, the app sends controller state, connection/session tokens, sequence numbers, and protocol messages to the configured IPv4 address and port, normally a device on your local network. Controller state includes supported buttons, sticks, directional-pad input, and trigger values. Windows PC mode also sends assigned keyboard keys, mouse buttons, pointer movement and scrolling. The receiving device replies with readiness and acknowledgment messages. This exchange operates the controller; it does not upload your profile library or imported originals to a developer service.
+When you connect a console bridge or Windows or Mac receiver, the app sends controller state, connection/session tokens, sequence numbers, and protocol messages to the configured IPv4 address and port, normally a device on your local network. Controller state includes supported buttons, sticks, directional-pad input, and trigger values. Windows and Mac modes also send assigned keyboard keys, mouse buttons, pointer movement and scrolling. The receiving device replies with readiness and acknowledgment messages. This exchange operates the controller; it does not upload your profile library or imported originals to a developer service.
 
 The connection uses UDP and has no app-level encryption or authentication. Session tokens keep connection sessions separate; they are not an account or device identifier. The network and receiving device can see the packets and network addresses needed for the connection. Disconnecting or switching to Practice stops the controller connection. You can also revoke Local Network access in iOS Settings.
 
